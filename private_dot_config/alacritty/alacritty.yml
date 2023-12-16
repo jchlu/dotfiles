@@ -14,9 +14,9 @@ import:
   # - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
   #- ~/.config/alacritty/tokyonight/tokyonight_night.yml
   # - ~/.config/alacritty/tokyonight/tokyonight_day.yml
-    - ~/.config/alacritty/tokyonight/tokyonight_moon.yml
+    # - ~/.config/alacritty/tokyonight/tokyonight_moon.yml
     #- ~/.config/alacritty/tokyonight/tokyonight_storm.yml
-#  - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+   - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
 #  - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
 #  - ~/.config/alacritty/catppuccin/catppuccin-latte.yml
 # Any items in the `env` entry below will be added as
