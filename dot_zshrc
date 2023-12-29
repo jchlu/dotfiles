@@ -12,6 +12,11 @@ fi
 if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
+
+wd() {
+    . /usr/share/wd/wd.sh
+}
+
 alias b64='base64 "`ls -tr1 | tail -n1`"'
 alias gg='lazygit'
 alias n.='nvim .'
