@@ -51,5 +51,4 @@ fi
 tmux attach-session -t $1
 }
 
-source /usr/share/nvm/init-nvm.sh
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR"/ssh-agent.socket
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
