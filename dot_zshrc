@@ -50,5 +50,6 @@ fi
 # Attach to created session
 tmux attach-session -t $1
 }
-
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+# SSH_AUTH_SOCK=/run/user/<yourUID>/keyring/ssh
+# export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
