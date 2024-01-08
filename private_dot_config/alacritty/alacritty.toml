@@ -1,0 +1,11 @@
+import = ["/home/jchlu/.config/alacritty/catppuccin/catppuccin-macchiato.toml"]
+
+[font]
+size = 13.0
+
+[font.normal]
+family = "Hack Nerd Font Mono"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "F11"
