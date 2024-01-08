@@ -3,5 +3,6 @@ cm:~/.local/share/chezmoi
 dl:~/Downloads
 n:~/.local/share/chezmoi/private_dot_config/nvim
 pr:~/Projects
+sce:~/Projects/sce
 t:~/.local/share/chezmoi/private_dot_config/tmux
 tr:~/Projects/training
