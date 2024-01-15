@@ -21,6 +21,15 @@ autocmd('BufWritePost', {
     command = '! chezmoi apply --source-path "%"',
     group = group
 })
+-- @jchlu - And in the other direction
+local group = vim.api.nvim_create_augroup('nvimsync', { clear = true })
+local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
+
+autocmd('BufWritePost', {
+    pattern = '*/.config/nvim/*',
+    command = '! chezmoi re-add --source-path "%"',
+    group = group
+})
 -- This has to be set before initializing lazy
 vim.g.mapleader = " "
 vim.g.loaded_node_provider = 0
