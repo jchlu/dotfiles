@@ -27,7 +27,7 @@ local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
 autocmd('BufWritePost', {
     pattern = '*/.config/nvim/*',
-    command = '! chezmoi re-add ~/.config/nvim',
+    command = '! chezmoi add ~/.config/nvim/*',
     group = group
 })
 -- This has to be set before initializing lazy
