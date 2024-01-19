@@ -20,6 +20,9 @@ github = 'zsh-users/zsh-history-substring-search'
 [plugins.fzf-history-search]
 github = 'joshskidmore/zsh-fzf-history-search'
 
+[plugins.bossgit]
+github = 'bossjones/boss-git-zsh-plugin'
+
 # For example:
 #
 # [plugins.base16]
