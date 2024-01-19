@@ -53,3 +53,5 @@ tmux attach-session -t $1
 # SSH_AUTH_SOCK=/run/user/<yourUID>/keyring/ssh
 # export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
+
+eval "$(sheldon source)"
