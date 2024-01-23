@@ -55,3 +55,8 @@ tmux attach-session -t $1
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
 
 eval "$(sheldon source)"
+
+# fnm
+export PATH="/home/jchlu/.local/share/fnm:$PATH"
+eval "`fnm env`"
+eval "$(fnm env --use-on-cd)"

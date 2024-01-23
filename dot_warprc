@@ -4,6 +4,7 @@ dl:~/Downloads
 n:~/.config/nvim
 pr:~/Projects
 sce:~/Projects/sce
+tip:~/Projects/training/nextjs-dashboard
 t:~/.local/share/chezmoi/private_dot_config/tmux
 tr:~/Projects/training
 wip:~/Projects/su/directory.supportingyou.org
