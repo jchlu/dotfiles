@@ -47,6 +47,9 @@ keymap.set("n", "<leader>er", ":NvimTreeFocus<CR>")    -- toggle focus to file e
 keymap.set("n", "<leader>ef", ":NvimTreeFindFile<CR>") -- find file in file explorer
 
 -- Telescope
+keymap.set('n', '<leader>km', require('telescope.builtin').keymaps, {})
+keymap.set('n', '<leader>qf', require('telescope.builtin').quickfix, {})
+keymap.set('n', '<leader>gs', require('telescope.builtin').git_status, {})
 keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, {})
 keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep, {})
 keymap.set('n', '<leader>fw', require('telescope.builtin').grep_string, {})
