@@ -47,18 +47,20 @@ keymap.set("n", "<leader>er", ":NvimTreeFocus<CR>")    -- toggle focus to file e
 keymap.set("n", "<leader>ef", ":NvimTreeFindFile<CR>") -- find file in file explorer
 
 -- Telescope
-keymap.set('n', '<leader>km', require('telescope.builtin').keymaps, {})
-keymap.set('n', '<leader>qf', require('telescope.builtin').quickfix, {})
-keymap.set('n', '<leader>gs', require('telescope.builtin').git_status, {})
-keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, {})
-keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep, {})
-keymap.set('n', '<leader>fw', require('telescope.builtin').grep_string, {})
-keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, {})
-keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags, {})
-keymap.set('n', '<leader>fs', require('telescope.builtin').current_buffer_fuzzy_find, {})
-keymap.set('n', '<leader>fo', require('telescope.builtin').lsp_document_symbols, {})
-keymap.set('n', '<leader>fi', require('telescope.builtin').lsp_incoming_calls, {})
-keymap.set('n', '<leader>fm', function() require('telescope.builtin').treesitter({ default_text = ":method:" }) end)
+local builtin = require('telescope.builtin')
+keymap.set('n', '<leader>km', builtin.keymaps, {})
+keymap.set('n', '<leader>qf', builtin.quickfix, {})
+keymap.set('n', '<leader>gs', builtin.git_status, {})
+keymap.set('n', '<leader>ff', builtin.find_files, {})
+-- keymap.set('n', '<leader>fr', builtin.old_files, {})
+keymap.set('n', '<leader>fg', builtin.live_grep, {})
+keymap.set('n', '<leader>fw', builtin.grep_string, {})
+keymap.set('n', '<leader><space>', builtin.buffers, {})
+keymap.set('n', '<leader>fh', builtin.help_tags, {})
+keymap.set('n', '<leader>fs', builtin.current_buffer_fuzzy_find, {})
+keymap.set('n', '<leader>fo', builtin.lsp_document_symbols, {})
+keymap.set('n', '<leader>fi', builtin.lsp_incoming_calls, {})
+keymap.set('n', '<leader>fm', function() builtin.treesitter({ default_text = ":method:" }) end)
 
 -- Git-blame
 keymap.set("n", "<leader>gb", ":GitBlameToggle<CR>") -- toggle git blame
