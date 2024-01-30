@@ -21,12 +21,13 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
+export HISTFILESIZE=100000
+export HISTSIZE=100000
 export HISTFILE=~/.zsh_history
-export HISTFILESIZE=1000000000
-export HISTSIZE=1000000000
-setopt INC_APPEND_HISTORY
-export HISTTIMEFORMAT="[%F %T] "
+
 setopt HIST_FIND_NO_DUPS
+# following should be turned off, if sharing history via setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
 
 wd() {
     . /usr/share/wd/wd.sh
