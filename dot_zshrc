@@ -1,3 +1,4 @@
+setopt auto_cd
 # Use powerline
 USE_POWERLINE="true"
 # Has weird character width
@@ -54,9 +55,12 @@ tmux attach-session -t $1
 # export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
 
+export PATH="/home/jchlu/.cargo/bin:$PATH"
+
 eval "$(sheldon source)"
 
 # fnm
 export PATH="/home/jchlu/.local/share/fnm:$PATH"
 eval "`fnm env`"
 eval "$(fnm env --use-on-cd)"
+

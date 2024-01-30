@@ -14,6 +14,15 @@ shell = "zsh"
 
 [plugins]
 
+[plugins.powerlevel10k]
+github = 'romkatv/powerlevel10k'
+
+[plugins.zsh-autosuggestions]
+github = 'zsh-users/zsh-autosuggestions'
+
+[plugins.wd]
+github = 'mfaerevaag/wd'
+
 [plugins.historysearch]
 github = 'zsh-users/zsh-history-substring-search'
 
