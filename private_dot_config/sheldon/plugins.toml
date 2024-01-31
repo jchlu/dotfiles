@@ -34,5 +34,5 @@ github = 'bossjones/boss-git-zsh-plugin'
 
 # For example:
 #
-# [plugins.base16]
-# github = "chriskempson/base16-shell"
+[plugins.base16]
+github = "chriskempson/base16-shell"
