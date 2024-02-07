@@ -4,7 +4,6 @@ HISTSIZE=100000
 SAVEHIST=100000
 setopt autocd extendedglob nomatch
 unsetopt beep
-bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/jchlu/.zshrc'
