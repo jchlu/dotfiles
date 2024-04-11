@@ -100,3 +100,11 @@ eval "$(fnm env --use-on-cd)"
 # For example, this would bind ctrl + space to accept the current suggestion.
 #
 bindkey '^ ' autosuggest-accept
+
+# bun completions
+[ -s "/home/jchlu/.bun/_bun" ] && source "/home/jchlu/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu

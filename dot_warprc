@@ -2,8 +2,9 @@ a:~/.local/share/chezmoi/private_dot_config/alacritty
 cm:~/.local/share/chezmoi
 dl:~/Downloads
 fcpa:~/MEGA/Florida Chiropractic/Monthly Queries
-n:~/.config/nvim
+n:~/.local/share/chezmoi/private_dot_config/nvim
 pr:~/Projects
+sb:~/Projects/sandbox
 sce:~/Projects/sce
 tip:~/Projects/training/nextjs-dashboard
 t:~/.local/share/chezmoi/private_dot_config/tmux
