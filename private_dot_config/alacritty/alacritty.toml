@@ -1,5 +1,8 @@
 import = ["/home/jchlu/.config/alacritty/catppuccin/catppuccin-macchiato.toml"]
 
+[window]
+dimensions = { columns = 120, lines = 40  }
+
 [font]
 size = 16.0
 
