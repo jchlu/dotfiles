@@ -103,7 +103,7 @@
 	"format": "  ",
 	"tooltip": false,
 	"on-click": "$HOME/.config/rofi/launchers/type-2/launcher.sh",
-  "on-click-right": "$HOME/.config/waybar/scripts/swww.sh /home/tdm/Pictures/Wallpapers/ &"
+  "on-click-right": "$HOME/.config/waybar/scripts/swww.sh $HOME/Pictures/Wallpapers/ &"
     },
     "custom/next": {
         "exec": "python3 ~/.config/waybar/scripts/next.py --player spotify",
