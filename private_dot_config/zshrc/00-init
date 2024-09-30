@@ -10,4 +10,4 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
 export MAKEFLAGS=-j6
 export PAGER='most'
 export GROFF_NO_SGR=1
-
+export SSH_AUTH_SOCK=~/.1password/agent.sock
