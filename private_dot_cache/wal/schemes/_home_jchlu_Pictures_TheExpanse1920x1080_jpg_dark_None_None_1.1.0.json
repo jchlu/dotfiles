@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/jchlu/Pictures/TheExpanse1920x1080.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0A0608",
+        "foreground": "#d9d6d2",
+        "cursor": "#d9d6d2"
+    },
+    "colors": {
+        "color0": "#0A0608",
+        "color1": "#88837C",
+        "color2": "#837E80",
+        "color3": "#788C85",
+        "color4": "#8D948C",
+        "color5": "#9DA39A",
+        "color6": "#AFB5AB",
+        "color7": "#d9d6d2",
+        "color8": "#979593",
+        "color9": "#88837C",
+        "color10": "#837E80",
+        "color11": "#788C85",
+        "color12": "#8D948C",
+        "color13": "#9DA39A",
+        "color14": "#AFB5AB",
+        "color15": "#d9d6d2"
+    }
+}
