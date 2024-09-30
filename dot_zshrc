@@ -58,7 +58,6 @@ tmux attach-session -t $1
 }
 # SSH_AUTH_SOCK=/run/user/<yourUID>/keyring/ssh
 # export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
 
 export PATH="/home/jchlu/.cargo/bin:$PATH"
 
@@ -97,6 +96,3 @@ if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
  export PATH="$HOME/adb-fastboot/platform-tools:$PATH"
 fi
 
-export MAKEFLAGS=-j6
-export PAGER='most'
-export GROFF_NO_SGR=1

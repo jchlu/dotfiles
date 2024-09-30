@@ -6,3 +6,8 @@
 # Exports
 # -----------------------------------------------------
 export PATH="/usr/lib/ccache/bin/:$PATH"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
+export MAKEFLAGS=-j6
+export PAGER='most'
+export GROFF_NO_SGR=1
+
