@@ -130,18 +130,20 @@ keymap.set('n', '<shift>K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 vim.keymap.set('n', '<leader>o', '<cmd>call append(line("."),   repeat([""], v:count1))<cr>')
 vim.keymap.set('n', '<leader>O', '<cmd>call append(line(".")-1,   repeat([""], v:count1))<cr>')
 vim.keymap.set('n', '<leader>tb', function()
-    if vim.opt['bg']:get() == 'dark' then
-        vim.opt['bg'] = 'light'
-    else
-        vim.opt['bg'] = 'dark'
-    end
+  if vim.opt['bg']:get() == 'dark' then
+    vim.opt['bg'] = 'light'
+    vim.api.nvim_set_hl(0, 'LineNr', { fg='#783602' })
+  else
+    vim.opt['bg'] = 'dark'
+    vim.api.nvim_set_hl(0, 'LineNr', { fg='#ff8e33' })
+  end
 end)
 vim.keymap.set('n', '<leader>tw', function()
-    if vim.opt['wrap']:get() == true then
-        vim.opt['wrap'] = false
-    else
-        vim.opt['wrap'] = true
-    end
+  if vim.opt['wrap']:get() == true then
+    vim.opt['wrap'] = false
+  else
+    vim.opt['wrap'] = true
+  end
 end)
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { silent = true })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { silent = true })
