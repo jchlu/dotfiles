@@ -37,7 +37,7 @@ vim.g.loaded_perl_provider = 0
 vim.g.loaded_ruby_provider = 0
 
 -- Initialize lazy with dynamic loading of anything in the plugins directory
-require("lazy").setup("plugins", {
+require("lazy").setup({{import = "plugins"},{ import = "plugins.lsp" }}, {
     change_detection = {
         enabled = true, -- automatically check for config file changes and reload the ui
         notify = false, -- turn off notifications whenever plugin changes are made
