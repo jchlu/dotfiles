@@ -1,32 +1,4 @@
 # -----------------------------------------------------
-# CUSTOMIZATION
-# -----------------------------------------------------
-
-# -----------------------------------------------------
-# oh-myzsh themes: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# -----------------------------------------------------
-# ZSH_THEME=robbyrussell
-
-# -----------------------------------------------------
-# oh-myzsh plugins
-# -----------------------------------------------------
-# plugins=(
-#     git
-#     sudo
-#     web-search
-#     archlinux
-#     zsh-autosuggestions
-#     zsh-syntax-highlighting
-#     fast-syntax-highlighting
-#     copyfile
-#     copybuffer
-#     dirhistory
-# )
-
-# Set-up oh-my-zsh
-# source $ZSH/oh-my-zsh.sh
-
-# -----------------------------------------------------
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 # -----------------------------------------------------
 source <(fzf --zsh)
@@ -35,18 +7,12 @@ source <(fzf --zsh)
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
-setopt appendhistory
+setopt appendhistory autocd extendedglob nomatch
+unsetopt beep
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/jchlu/.zshrc'
 
-# -----------------------------------------------------
-# Starship promt
-# -----------------------------------------------------
-# eval "$(starship init zsh)"
-
-# -----------------------------------------------------
-# oh-my-posh promt
-# -----------------------------------------------------
-# Custom Theme
-# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
-
-# Shipped Theme
-# eval "$(oh-my-posh init zsh --config /usr/share/oh-my-posh/themes/agnoster.omp.json)"
+autoload -Uz compinit
+compinit
