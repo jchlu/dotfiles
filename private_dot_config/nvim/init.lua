@@ -25,6 +25,13 @@ autocmd('BufWritePost', {
 local group = vim.api.nvim_create_augroup('nvimsync', { clear = true })
 local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
+-- local directory = vim.fn.expand("%:h")
+-- autocmd('BufWritePost', {
+--     pattern = '*/.config/(*.)/*',
+--     command = '! chezmoi add ~/.config/' .. directory .. '/*',
+--     group = group
+-- })
+
 autocmd('BufWritePost', {
     pattern = '*/.config/nvim/*',
     command = '! chezmoi add ~/.config/nvim/*',
@@ -47,3 +54,4 @@ require("lazy").setup({{import = "plugins"},{ import = "plugins.lsp" }}, {
 -- These modules are not loaded by lazy
 require("core.options")
 require("core.keymaps")
+
