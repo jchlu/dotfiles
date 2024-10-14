@@ -1,0 +1,14 @@
+[
+    {
+        "key": "general:gaps_out",
+        "value": 5
+    },
+    {
+        "key": "decoration:rounding",
+        "value": 6
+    },
+    {
+        "key": "decoration:blur:enabled",
+        "value": true
+    }
+]
