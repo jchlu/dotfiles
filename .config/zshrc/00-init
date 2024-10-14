@@ -1,0 +1,17 @@
+# -----------------------------------------------------
+# INIT
+# -----------------------------------------------------
+
+# -----------------------------------------------------
+# Exports
+# -----------------------------------------------------
+export PATH="/usr/lib/ccache/bin/:/home/jchlu/.local/bin:$PATH"
+export MAKEFLAGS=-j6
+export PAGER='most'
+export GROFF_NO_SGR=1
+export SSH_AUTH_SOCK=~/.1password/agent.sock
+export EDITOR=nvim
+export VISUAL=nvim
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"

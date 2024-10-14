@@ -1,0 +1,112 @@
+# -----------------------------------------------------
+# ALIASES
+# -----------------------------------------------------
+
+# -----------------------------------------------------
+# General
+# -----------------------------------------------------
+alias c='clear'
+alias nf='fastfetch'
+alias pf='fastfetch'
+alias ff='fastfetch'
+alias ls='eza -a --icons'
+alias ll='eza -al --icons'
+alias lt='eza -a --tree --level=1 --icons'
+alias shutdown='systemctl poweroff'
+alias v='$EDITOR'
+alias vim='$EDITOR'
+alias ts='~/.config/ml4w/scripts/snapshot.sh'
+alias wifi='nmtui'
+alias cleanup='~/.config/ml4w/scripts/cleanup.sh'
+alias yup='rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist && yay'
+
+# -----------------------------------------------------
+# ML4W Apps
+# -----------------------------------------------------
+alias ml4w='~/.config/ml4w/apps/ML4W_Welcome-x86_64.AppImage'
+alias ml4w-settings='~/.config/ml4w/apps/ML4W_Dotfiles_Settings-x86_64.AppImage'
+alias ml4w-sidebar='ags -t sidebar'
+alias ml4w-hyprland='~/.config/ml4w/apps/ML4W_Hyprland_Settings-x86_64.AppImage'
+alias ml4w-diagnosis='~/.config/hypr/scripts/diagnosis.sh'
+alias ml4w-hyprland-diagnosis='~/.config/hypr/scripts/diagnosis.sh'
+alias ml4w-qtile-diagnosis='~/.config/ml4w/qtile/scripts/diagnosis.sh'
+alias ml4w-update='~/.config/ml4w/update.sh'
+
+# -----------------------------------------------------
+# Window Managers
+# -----------------------------------------------------
+
+alias Qtile='startx'
+# Hyprland with Hyprland
+
+# -----------------------------------------------------
+# Git
+# -----------------------------------------------------
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit -m"
+alias gp="git push"
+alias gpl="git pull"
+alias gst="git stash"
+alias gsp="git stash; git pull"
+alias gcheck="git checkout"
+alias gcredential="git config credential.helper store"
+
+# -----------------------------------------------------
+# Scripts
+# -----------------------------------------------------
+alias ascii='~/.config/ml4w/scripts/figlet.sh'
+
+# -----------------------------------------------------
+# System
+# -----------------------------------------------------
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+
+# -----------------------------------------------------
+# Qtile
+# -----------------------------------------------------
+alias res1='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 120'
+alias res2='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 120'
+alias setkb='setxkbmap de;echo "Keyboard set back to de."'
+
+# Original aliases from jchlu's .zshrc
+wd() {
+    . /usr/share/wd/wd.sh
+}
+
+alias b64='base64 "`ls -tr1 | tail -n1`"'
+alias gg='lazygit'
+alias n.='nvim .'
+alias n=$EDITOR
+alias noise='play -n synth brownnoise brownnoise pinknoise pinknoise whitenoise whitenoise vol 0.3'
+alias nrd='npm run dev'
+alias pbcopy='xclip -sel clip'
+alias pink='play -n synth pinknoise vol 0.3' # requires  `sox` app `sudo apt install sox`
+alias pm='sudo pacman '
+alias pmi='sudo pacman -Sy '
+alias pmu='sudo pacman -Syu'
+alias sb='npx supabase'
+alias sudoedit='sudo -E -s '
+alias tmuxa='tmux attach -t '
+alias tmuxs='tmux new-session -s '
+alias zr='source ~/.zshrc'
+alias cm='chezmoi'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+ch() {
+  curl cheat.sh/$1
+}
+
+t() {
+  wd $1
+  # Check if the session exists, discarding output
+# We can check $? for the exit status (zero for success, non-zero for failure)
+tmux has-session -t $1 2>/dev/null
+
+if [ $? != 0 ]; then
+  tmux new-session -s $1
+fi
+
+# Attach to created session
+tmux attach-session -t $1
+}
