@@ -19,6 +19,7 @@ alias ts='~/.config/ml4w/scripts/snapshot.sh'
 alias wifi='nmtui'
 alias cleanup='~/.config/ml4w/scripts/cleanup.sh'
 alias yup='rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist && yay'
+alias y="yazi"
 
 # -----------------------------------------------------
 # ML4W Apps

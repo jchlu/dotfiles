@@ -1,8 +1,8 @@
-## Dotfiles repo.
+##Dotfiles repo.
 
 Currently managed using [GNU Stow](https://www.gnu.org/software/stow/manual/html_node/index.html)
 
-## Fix dodgy HP on board wifi card:
+##Fix dodgy HP on board wifi card:
 
 Turn off wifi power save:
 Create .conf file:
