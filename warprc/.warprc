@@ -1,11 +1,11 @@
 dl:~/Downloads
-dots:~/.dotfiles
 fcpa:~/MEGA/Florida Chiropractic/Monthly Queries
-n:~/.local/share/chezmoi/private_dot_config/nvim
+k:~/.config/kitty
+n:~/.config/nvim
 pr:~/Projects
 sb:~/Projects/sandbox
 sce:~/Projects/sce
+t:~/.config/tmux
 tip:~/Projects/training/nextjs-dashboard
-t:~/.local/share/chezmoi/private_dot_config/tmux
 tr:~/Projects/training
 wip:~/Projects/ss-invoicing-app
