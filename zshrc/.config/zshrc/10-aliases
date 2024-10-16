@@ -20,6 +20,7 @@ alias wifi='nmtui'
 alias cleanup='~/.config/ml4w/scripts/cleanup.sh'
 alias yup='rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist && yay'
 alias y="yazi"
+alias nf='fzf -m --preview="bat --color=always {}" --bind "enter:become(nvim {+})"'
 
 # -----------------------------------------------------
 # ML4W Apps
