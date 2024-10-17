@@ -1,0 +1,7 @@
+include "%L"
+
+# Hit <SHIFT><CTRL> U to bring up the nvim Unicode search
+
+# <Multi_key> <f> <d>		: ""  U1F1E9 # REPUBLÍCA DOMINICANA 
+<Multi_key> <e> <r>		: "🚀"  U1F680 # ROCKET 
+
