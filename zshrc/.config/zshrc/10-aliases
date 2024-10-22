@@ -5,9 +5,6 @@
 # -----------------------------------------------------
 # General
 # -----------------------------------------------------
-alias c='clear'
-alias nf='fastfetch'
-alias pf='fastfetch'
 alias ff='fastfetch'
 alias ls='eza -al --icons'
 alias ll='eza -al --icons --git'
@@ -19,8 +16,10 @@ alias ts='~/.config/ml4w/scripts/snapshot.sh'
 alias wifi='nmtui'
 alias cleanup='~/.config/ml4w/scripts/cleanup.sh'
 alias yup='rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist && yay'
-alias y="yazi"
+alias rtw89='yay --noconfirm -S rtw89-dkms-git && sudo dracut -f --regenerate-all'
+alias ra="ranger"
 alias nf='fzf -m --preview="bat --color=always {}" --bind "enter:become(nvim {+})"'
+alias tmc='transmission-client'
 
 # -----------------------------------------------------
 # ML4W Apps
@@ -35,13 +34,6 @@ alias ml4w-qtile-diagnosis='~/.config/ml4w/qtile/scripts/diagnosis.sh'
 alias ml4w-update='~/.config/ml4w/update.sh'
 
 # -----------------------------------------------------
-# Window Managers
-# -----------------------------------------------------
-
-alias Qtile='startx'
-# Hyprland with Hyprland
-
-# -----------------------------------------------------
 # Git
 # -----------------------------------------------------
 alias gs="git status"
@@ -51,7 +43,7 @@ alias gp="git push"
 alias gpl="git pull"
 alias gst="git stash"
 alias gsp="git stash; git pull"
-alias gcheck="git checkout"
+alias gco="git checkout"
 alias gcredential="git config credential.helper store"
 
 # -----------------------------------------------------
@@ -63,13 +55,6 @@ alias ascii='~/.config/ml4w/scripts/figlet.sh'
 # System
 # -----------------------------------------------------
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-
-# -----------------------------------------------------
-# Qtile
-# -----------------------------------------------------
-alias res1='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 120'
-alias res2='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 120'
-alias setkb='setxkbmap de;echo "Keyboard set back to de."'
 
 # Original aliases from jchlu's .zshrc
 wd() {
