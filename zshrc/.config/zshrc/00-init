@@ -9,7 +9,7 @@ eval "$(starship init zsh)"
 # Exports
 # -----------------------------------------------------
 setopt ALL_EXPORT
-PATH="/usr/lib/ccache/bin/:/home/jchlu/.local/bin:$PATH"
+PATH="/usr/lib/ccache/bin/:/home/jchlu/.local/bin:/home/jchlu/.config/composer/vendor/bin:$PATH"
 MAKEFLAGS=-j6
 PAGER='most'
 GROFF_NO_SGR=1

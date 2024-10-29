@@ -71,3 +71,5 @@ if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
  export PATH="$HOME/adb-fastboot/platform-tools:$PATH"
 fi
 
+export PATH="/home/jchlu/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/jchlu/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
