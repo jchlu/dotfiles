@@ -17,7 +17,8 @@ return {
         typescript = { "prettierd" },
         javascriptreact = { "prettierd" },
         typescriptreact = { "prettierd" },
-      },
+        blade = { "blade-formatter" },
+      }
     })
     -- stopinsert
     vim.keymap.set("i", "<C-s>", function()
