@@ -7,6 +7,7 @@ return {
     "L3MON4D3/LuaSnip",-- snippet engine
     "saadparwaiz1/cmp_luasnip", -- for autocompletion
     "rafamadriz/friendly-snippets", -- useful snippets
+    "kristijanhusak/vim-dadbod-completion",
   },
   config = function()
     local cmp = require("cmp")
@@ -40,6 +41,12 @@ return {
         { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths
       }),
+      -- Setup dadbod
+      cmp.setup.filetype({ 'sql' }, {
+        sources = {
+          { name = "vim-dadbod-completion" }
+        }
+      })
     })
   end,
 }
