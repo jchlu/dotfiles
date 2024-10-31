@@ -7,36 +7,16 @@ for f in ~/.config/zshrc/*; do
     fi
 done
 
-# Lines configured by zsh-newuser-install
-# End of lines added by compinstall
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
-# 
-# # Use powerline
-# USE_POWERLINE="true"
-# # Has weird character width
-# # Example:
-# #    is not a diamond
-# HAS_WIDECHARS="false"
-# # Source manjaro-zsh-configuration
-# if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
-#   source /usr/share/zsh/manjaro-zsh-config
-# fi
-# # Use manjaro zsh prompt
-# if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
-#   source /usr/share/zsh/manjaro-zsh-prompt
-# fi
-# 
 # SSH_AUTH_SOCK=/run/user/<yourUID>/keyring/ssh
 # export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
+if [ -d "$HOME/.cargo" ] ; then
 export PATH="/home/jchlu/.cargo/bin:$PATH"
+fi
 
-eval "$(sheldon source)"
+if type sheldon > /dev/null ; then
+  eval "$(sheldon source)"
+fi
 
 # fnm
 export PATH="/home/jchlu/.local/share/fnm:$PATH"
@@ -60,16 +40,26 @@ eval "$(fnm env --use-on-cd)"
 #
 bindkey '^ ' autosuggest-accept
 
-# bun completions
-[ -s "/home/jchlu/.bun/_bun" ] && source "/home/jchlu/.bun/_bun"
+if [ -d "$HOME/.bun" ] ; then
+  # bun completions
+  [ -s "/home/jchlu/.bun/_bun" ] && source "/home/jchlu/.bun/_bun"
+  # bun
+  export BUN_INSTALL="$HOME/.bun"
+  export PATH="$BUN_INSTALL/bin:$PATH"
+fi
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
+
 if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
  export PATH="$HOME/adb-fastboot/platform-tools:$PATH"
 fi
 
-export PATH="/home/jchlu/.config/herd-lite/bin:$PATH"
-export PHP_INI_SCAN_DIR="/home/jchlu/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+if [ -d "$HOME/.config/herd-lite" ] ; then
+  export PATH="/home/jchlu/.config/herd-lite/bin:$PATH"
+  export PHP_INI_SCAN_DIR="/home/jchlu/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+fi
+
+if [ -d "$HOME/.lando" ] ; then
+  # Lando
+  export PATH="/home/jchlu/.lando/bin${PATH+:$PATH}"; #landopath
+fi
