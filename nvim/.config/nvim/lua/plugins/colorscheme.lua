@@ -17,15 +17,16 @@ return {
       highlight NonText guibg=none
       highlight Normal ctermbg=none
       highlight NonText ctermbg=none
-    ]]      
+      highlight LineNr guifg=#ff8e33
+      highlight CursorLine guibg=#100c08    
+      ]]      
     -- Colorscheme overrides
-    --vim.cmd([[
-    --      autocmd VimEnter * hi DiffAdd guifg=#00FF00 guibg=#005500
-    --      autocmd VimEnter * hi DiffDelete guifg=#FF0000 guibg=#550000
-    --      autocmd VimEnter * hi DiffChange guifg=#CCCCCC guibg=#555555
-    --      autocmd VimEnter * hi DiffText guifg=#00FF00 guibg=#005500
-    --      autocmd VimEnter * hi LineNr guifg=#ff8e33
-    --    ]])
+    vim.cmd([[
+      autocmd VimEnter * hi DiffAdd guifg=#00FF00 guibg=#005500
+      autocmd VimEnter * hi DiffDelete guifg=#FF0000 guibg=#550000
+      autocmd VimEnter * hi DiffChange guifg=#CCCCCC guibg=#555555
+      autocmd VimEnter * hi DiffText guifg=#00FF00 guibg=#005500
+    ]])
   end
 }
 
