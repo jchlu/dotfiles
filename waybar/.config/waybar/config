@@ -16,7 +16,7 @@
     ],    
     "modules-left": [
         "custom/appmenu",
-        "group/quicklinks",
+        // "group/quicklinks",
         "hyprland/window"
     ],
     "modules-center": [
