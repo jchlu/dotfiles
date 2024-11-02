@@ -1,14 +1,14 @@
 -- Bootstrap lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system({
-        "git",
-        "clone",
-        "--filter=blob:none",
-        "https://github.com/folke/lazy.nvim.git",
-        "--branch=stable", -- latest stable release
-        lazypath,
-    })
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -44,18 +44,18 @@ vim.g.loaded_perl_provider = 0
 vim.g.loaded_ruby_provider = 0
 
 -- Initialize lazy with dynamic loading of anything in the plugins directory
-require("lazy").setup({{import = "plugins"},{ import = "plugins.lsp" }}, {
-    change_detection = {
-        enabled = true, -- automatically check for config file changes and reload the ui
-        notify = false, -- turn off notifications whenever plugin changes are made
-    },
+require("lazy").setup({ { import = "plugins" }, { import = "plugins.lsp" } }, {
+  change_detection = {
+    enabled = true, -- automatically check for config file changes and reload the ui
+    notify = false, -- turn off notifications whenever plugin changes are made
+  },
 })
 
 -- Add filetype for Blade
 vim.filetype.add({
-    pattern = {
-        [".*%.blade%.php"] = "blade",
-    },
+  pattern = {
+    [".*%.blade%.php"] = "blade.php",
+  },
 })
 
 -- These modules are not loaded by lazy
@@ -66,13 +66,13 @@ local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 parser_config.blade = {
   install_info = {
     url = "https://github.com/EmranMR/tree-sitter-blade",
-    files = {"src/parser.c"},
+    files = { "src/parser.c" },
     branch = "main",
   },
-  filetype = "blade"
+  filetype = "blade.php"
 }
 
- -- Set the *.blade.php file to be filetype of blade 
+-- Set the *.blade.php file to be filetype of blade
 -- augroup BladeFiltypeRelated
 --   au BufNewFile,BufRead *.blade.php set ft=blade
 -- augroup END

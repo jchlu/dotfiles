@@ -16,7 +16,7 @@ return {
           package_installed = "✔",
           package_pending = "→",
           package_unistalled = "❌"
-        } 
+        }
       }
     })
     mason_lspconfig.setup({
@@ -28,9 +28,9 @@ return {
         'marksman',
         'tailwindcss',
         'emmet_language_server',
+        'intelephense',
       },
       automatic_installation = true,
     })
   end,
 }
-

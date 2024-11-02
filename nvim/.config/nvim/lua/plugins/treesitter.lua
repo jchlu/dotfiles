@@ -1,4 +1,3 @@
-local matchup = require "plugins.vim-matchup"
 -- Code Tree Support / Syntax Highlighting
 return {
   'nvim-treesitter/nvim-treesitter',
