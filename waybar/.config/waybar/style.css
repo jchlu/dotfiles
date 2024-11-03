@@ -10,16 +10,18 @@
  * ----------------------------------------------------- 
 */
 
-@define-color backgroundlight #FFFFFF;
-@define-color backgrounddark #FFFFFF;
-@define-color workspacesbackground1 #FFFFFF;
-@define-color workspacesbackground2 #CCCCCC;
-@define-color bordercolor #FFFFFF;
-@define-color textcolor1 #000000;
-@define-color textcolor2 #000000;
-@define-color textcolor3 #FFFFFF;
-@define-color iconcolor #FFFFFF;
-
+@import 'mocha.css';
+@define-color backgroundlight @mantle;
+@define-color backgrounddark @crust;
+@define-color workspacesbackground1 @base;
+@define-color workspacesbackground2 @mantle;
+@define-color bordercolor @flamingo;
+@define-color textcolor1 @mauve;
+@define-color textcolor2 @teal;
+@define-color textcolor3 @sapphire;
+@define-color textcolor4 @pink;
+@define-color clockcolor @yellow;
+@define-color iconcolor @rosewater;
 /* -----------------------------------------------------
  * General 
  * ----------------------------------------------------- */
@@ -31,7 +33,7 @@
 }
 
 window#waybar {
-    background-color: rgba(0,0,0,0.2);
+    background-color: @crust;
     border-bottom: 0px solid #ffffff;
     /* color: #FFFFFF; */
     transition-property: background-color;
@@ -154,7 +156,7 @@ window#waybar.empty #window {
 #custom-appmenu,
 #clock {
     margin-right: 20px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     color: @iconcolor;
     padding: 4px 10px 2px 10px;
@@ -173,7 +175,7 @@ window#waybar.empty #window {
 #custom-quicklink10 {
     padding:0px;
     margin-right: 7px;
-    font-size:20px;
+    font-size:16px;
     color: @iconcolor;
 }
 
@@ -183,7 +185,7 @@ window#waybar.empty #window {
 
 #custom-appmenu {
     background-color: @backgrounddark;
-    color: @textcolor1;
+    color: @green;
     border-radius: 15px;
     margin: 10px 10px 10px 10px;
 }
@@ -195,8 +197,8 @@ window#waybar.empty #window {
 #custom-exit {
     margin: 2px 20px 0px 0px;
     padding:0px;
-    font-size:20px;
-    color: @iconcolor;
+    font-size:18px;
+    color: @red;
 }
 
 /* -----------------------------------------------------
@@ -221,7 +223,7 @@ window#waybar.empty #window {
 #clock {
     background-color: @backgrounddark;
     font-size: 16px;
-    color: @textcolor1;
+    color: @clockcolor;
     border-radius: 15px;
     margin: 10px 7px 10px 0px;
 }
@@ -233,7 +235,7 @@ window#waybar.empty #window {
 #pulseaudio {
     background-color: @backgroundlight;
     font-size: 16px;
-    color: @textcolor2;
+    color: @textcolor4;
     border-radius: 15px;
     margin: 10px 10px 10px 0px;
 }
@@ -292,7 +294,7 @@ window#waybar.empty #window {
     font-size: 16px;
     color: @textcolor2;
     border-radius: 15px;
-    margin: 10px 15px 10px 0px;
+    margin: 10px;
 }
 
 #battery.charging, #battery.plugged {
@@ -303,7 +305,7 @@ window#waybar.empty #window {
 @keyframes blink {
     to {
         background-color: @backgroundlight;
-        color: @textcolor2;
+        color: @text;
     }
 }
 
@@ -315,6 +317,15 @@ window#waybar.empty #window {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+#keyboard-state {
+    background-color: @backgroundlight;
+    font-size: 16px;
+    color: @textcolor2;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 0px 10px 0px 10px;
 }
 
 /* -----------------------------------------------------

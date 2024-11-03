@@ -48,7 +48,7 @@
 
   // Power Menu
   "custom/exit": {
-    "format": "",
+    "format": "⏻",
     "tooltip-format": "Powermenu",
     "on-click": "wlogout -b 4",
     "tooltip": false
@@ -58,10 +58,13 @@
   "keyboard-state": {
     "numlock": true,
     "capslock": true,
-    "format": "{name} {icon}",
+    "format": {
+    "numlock": "➆ {icon}",
+    "capslock": "⇪ {icon}",
+    }, //"{name} {icon}",
     "format-icons": {
-      "locked": "",
-      "unlocked": ""
+      "locked": "◉ ",
+      "unlocked": "⭘ "
     }
   },
 
@@ -87,26 +90,25 @@
 
   // CPU
   "cpu": {
-    "format": "/ C {usage}% ",
+    "format": "[ C {usage}% ",
     "on-click": "kitty -e btop --preset 1"
   },
 
   // Memory
   "memory": {
-    "format": "/ M {}% ",
+    "format": "| M {}% ",
     "on-click": "kitty -e btop --preset 1"
   },
 
   // Harddisc space used
   "disk": {
     "interval": 30,
-    "format": "D {percentage_used}% ",
-    "path": "/",
-    "on-click": "kitty -e btop --preset 1"
-  }, 
+    "format": "| 🖸 {percentage_free}% ]",
+    "path": "/"
+  },
 
   "hyprland/language": {
-    "format": "/ K {short}"
+    "format": "| K {short}"
   },
 
   // Group Hardware
