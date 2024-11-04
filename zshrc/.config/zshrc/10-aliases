@@ -67,6 +67,7 @@ alias n.='nvim .'
 alias n=$EDITOR
 alias noise='play -n synth brownnoise brownnoise pinknoise pinknoise whitenoise whitenoise vol 0.3'
 alias nrd='npm run dev'
+alias crd='composer run dev'
 alias pbcopy='xclip -sel clip'
 alias pink='play -n synth pinknoise vol 0.3' # requires  `sox` app `sudo apt install sox`
 alias pm='sudo pacman '
