@@ -32,15 +32,14 @@ return {
             ['<c-d>'] = actions.delete_buffer
           },
           i = {
-            ["<C-b>"] = actions.preview_scrolling_up,
-            ["<C-f>"] = actions.preview_scrolling_down,
+            ["<C-u>"] = actions.preview_scrolling_up,
+            ["<C-d>"] = actions.preview_scrolling_down,
             -- ["<C-h>"] = actions.preview_scrolling_left,
             -- ["<C-l>"] = actions.preview_scrolling_right,
             ['<C-j>'] = actions.move_selection_next,
             ['<C-k>'] = actions.move_selection_previous,
             -- ['<C-q>'] = actions.send_selected_to_qflist + actions.open_qflist,
-            ['<C-u>'] = false,
-            ['<c-d>'] = actions.delete_buffer,
+            ['<c-w>'] = actions.delete_buffer,
           },
         },
       }
