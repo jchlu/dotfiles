@@ -21,10 +21,10 @@ local keymap = vim.keymap
 -- keymap.set("n", "<leader>sh", "<C-w><5")    -- make split windows width smaller
 
 -- Tab management
-keymap.set("n", "<leader>to", ":tabnew<CR>") -- open a new tab
+keymap.set("n", "<leader>to", ":tabnew<CR>")   -- open a new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close a tab
-keymap.set("n", "<leader>tn", ":tabn<CR>") -- next tab
-keymap.set("n", "<leader>tp", ":tabp<CR>") -- previous tab
+keymap.set("n", "<leader>tn", ":tabn<CR>")     -- next tab
+keymap.set("n", "<leader>tp", ":tabp<CR>")     -- previous tab
 
 -- Diff keymaps
 keymap.set("n", "<leader>cc", ":diffput<CR>")   -- put diff from current to other during diff
@@ -34,10 +34,10 @@ keymap.set("n", "<leader>cn", "]c")             -- next diff hunk
 keymap.set("n", "<leader>cp", "[c")             -- previous diff hunk
 
 -- Quickfix keymaps
-keymap.set("n", "<leader>qn", ":cnext<CR>") -- jump to next quickfix list item
-keymap.set("n", "<leader>qp", ":cprev<CR>") -- jump to prev quickfix list item
-keymap.set("n", "<leader>qo", ":copen<CR>") -- open quickfix list
-keymap.set("n", "<leader>qc", ":cclos<CR>") -- close quickfix list
+keymap.set("n", "<leader>qn", ":cnext<CR>")           -- jump to next quickfix list item
+keymap.set("n", "<leader>qp", ":cprev<CR>")           -- jump to prev quickfix list item
+keymap.set("n", "<leader>qo", ":copen<CR>")           -- open quickfix list
+keymap.set("n", "<leader>qc", ":cclos<CR>")           -- close quickfix list
 -- Vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle maximize tab
 
@@ -133,10 +133,10 @@ vim.keymap.set('n', '<leader>O', '<cmd>call append(line(".")-1,   repeat([""], v
 vim.keymap.set('n', '<leader>tb', function()
   if vim.opt['bg']:get() == 'dark' then
     vim.opt['bg'] = 'light'
-    vim.api.nvim_set_hl(0, 'LineNr', { fg='#783602' })
+    vim.api.nvim_set_hl(0, 'LineNr', { fg = '#783602' })
   else
     vim.opt['bg'] = 'dark'
-    vim.api.nvim_set_hl(0, 'LineNr', { fg='#ff8e33' })
+    vim.api.nvim_set_hl(0, 'LineNr', { fg = '#ff8e33' })
   end
 end)
 vim.keymap.set('n', '<leader>tw', function()
