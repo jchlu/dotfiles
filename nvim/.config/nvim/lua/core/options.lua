@@ -29,7 +29,7 @@ opt.cursorline = true
 opt.termguicolors = true
 -- opt.background = "dark"
 opt.signcolumn = "yes"
-opt.scrolloff = 8
+-- opt.scrolloff = 8
 
 -- Backspace
 opt.backspace = "indent,eol,start"
