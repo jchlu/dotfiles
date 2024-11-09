@@ -1,3 +1,5 @@
+vim.g.user_emmet_leader_key = ','
+
 -- Bootstrap lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
