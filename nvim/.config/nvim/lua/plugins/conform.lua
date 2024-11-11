@@ -5,7 +5,7 @@ return {
     conform.setup({
       format_on_save = {
         -- These options will be passed to conform.format()
-        timeout_ms = 500,
+        timeout_ms = 50000,
         lsp_fallback = true,
       },
       formatters_by_ft = {
@@ -23,27 +23,15 @@ return {
     -- stopinsert
     vim.keymap.set("i", "<C-s>", function()
       vim.cmd "stopinsert"
-      conform.format({
-        lsp_fallback = true,
-        async = false,
-        timeout_ms = 500,
-      })
+      conform.format()
       vim.cmd "update"
     end, { desc = "Format file or range (in visual mode) and save file" })
     vim.keymap.set({ "n", "v" }, "<C-s>", function()
-      conform.format({
-        lsp_fallback = true,
-        async = false,
-        timeout_ms = 500,
-      })
+      conform.format()
       vim.cmd "update"
     end, { desc = "Format file or range (in visual mode) and save file" })
     vim.keymap.set({ "n", "v" }, "<leader>ff", function()
-      conform.format({
-        lsp_fallback = true,
-        async = false,
-        timeout_ms = 500,
-      })
+      conform.format()
     end, { desc = "Format file or range (in visual mode)" })
   end,
 }
