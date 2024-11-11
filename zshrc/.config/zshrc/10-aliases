@@ -20,6 +20,7 @@ alias rtw89='yay --noconfirm -S rtw89-dkms-git && sudo dracut -f --regenerate-al
 alias ra="ranger"
 alias nf='fzf -m --preview="bat --color=always {}" --bind "enter:become(nvim {+})"'
 alias tmc='transmission-client'
+alias clip='cliphist list | fzf --no-sort | cliphist decode | wl-copy'
 
 # -----------------------------------------------------
 # ML4W Apps
