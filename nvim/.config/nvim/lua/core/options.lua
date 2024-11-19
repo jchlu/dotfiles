@@ -17,9 +17,9 @@ opt.expandtab = true
 opt.wrap = false
 
 -- Search Settings
-opt.hlsearch = false
+opt.hlsearch = true
 opt.incsearch = true
-opt.ignorecase = true
+opt.ignorecase = false
 opt.smartcase = true
 
 -- Cursor Line
