@@ -127,6 +127,7 @@ keymap.set('n', '<shift>K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 -- keymap.set("n", '<leader>de', function() require('telescope.builtin').diagnostics({ default_text = ":E:" }) end)
 
 -- Added by jchlu
+vim.keymap.set('n', '<leader>nh', '<cmd>noh<cr>')
 vim.keymap.set('n', '<leader>bb', '<cmd>b#<cr>')
 vim.keymap.set('n', '<leader>dd', '<cmd>DBUIToggle<cr>')
 vim.keymap.set('n', '<leader>o', '<cmd>call append(line("."),   repeat([""], v:count1))<cr>')
