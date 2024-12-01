@@ -6,6 +6,7 @@ return {
     'b0o/nvim-tree-preview.lua',
   },
   opts = {
+    view = { adaptive_size = true },
     update_focused_file = { enable = true },
     actions = {
       open_file = {
