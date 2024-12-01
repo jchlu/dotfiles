@@ -13,11 +13,11 @@ return {
         -- Conform will build multiple formatters sequentially
         -- python = { "isort", "black" },
         -- Use a sub-list to build only the first available formatter
-        javascript = { "prettierd" },
-        typescript = { "prettierd" },
+        javascript      = { "prettierd" },
+        typescript      = { "prettierd" },
         javascriptreact = { "prettierd" },
         typescriptreact = { "prettierd" },
-        blade = { "blade-formatter" },
+        blade           = { "blade-formatter" },
       }
     })
     -- stopinsert
