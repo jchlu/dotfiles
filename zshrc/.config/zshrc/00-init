@@ -18,3 +18,4 @@ EDITOR=nvim
 VISUAL=nvim
 STARSHIP_CONFIG=~/.config/starship/starship.toml
 
+XDG_CONFIG_HOME=~/.config/
