@@ -1,29 +1,47 @@
-import = ["/home/jchlu/.config/alacritty/catppuccin/catppuccin-macchiato.toml"]
 
 [window]
-dimensions = { columns = 120, lines = 40  }
+# dimensions = { columns = 120, lines = 32  }
+opacity = 0.9
+
+[colors]
+transparent_background_colors = true
 
 [font]
-size = 16.0
+size = 12.0
 
 [font.bold]
-family = "Hack Nerd Font Mono"
+# family = "Hack Nerd Font Mono"
+# family = "CaskaydiaMono Nerd Font Mono"
+# family = "SauceCodePro Nerd Font Mono"
+family = "Monoid"
 style = "Bold"
 
 [font.bold_italic]
-family = "Hack Nerd Font Mono"
+# family = "Hack Nerd Font Mono"
+# family = "CaskaydiaMono Nerd Font Mono"
+# family = "SauceCodePro Nerd Font Mono"
+family = "Monoid"
 style = "Bold Italic"
 
 [font.italic]
-family = "Hack Nerd Font Mono"
+# family = "Hack Nerd Font Mono"
+# family = "CaskaydiaMono Nerd Font Mono"
+family = "Monoid"
+# family = "SauceCodePro Nerd Font Mono"
 style = "Italic"
 
 [font.normal]
-family = "Hack Nerd Font Mono"
-style = "Regular"
+# family = "Hack Nerd Font Mono"
+# family = "SauceCodePro Nerd Font Mono"
+# family = "CaskaydiaMono Nerd Font Mono"
+family = "Monoid"
+style = "Retina"
 
 [keyboard]
 bindings = [
    { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" },
    { key = "F11", action = "ToggleFullscreen" }
 ]
+
+[general]
+import = ["/home/jchlu/.config/alacritty/catppuccin/catppuccin-macchiato.toml"]
