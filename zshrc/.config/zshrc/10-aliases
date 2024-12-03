@@ -5,22 +5,43 @@
 # -----------------------------------------------------
 # General
 # -----------------------------------------------------
+
+alias b64='base64 "`ls -tr1 | tail -n1`"'
+alias cleanup='~/.config/ml4w/scripts/cleanup.sh'
+alias clip='cliphist list | fzf --no-sort | cliphist decode | wl-copy'
+alias cm='chezmoi'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias crd='composer run dev'
+alias fc-list-mono="fc-list :mono | cut -d ':' -f2 | cut -d ',' -f1 | sort | uniq"
 alias ff='fastfetch'
-alias ls='eza -al --icons'
+alias gg='lazygit'
 alias ll='eza -al --icons --git'
+alias ls='eza -al --icons'
 alias lt='eza -a --tree --level=1 --icons'
+alias n=$EDITOR
+alias nf='fzf -m --preview="bat --color=always {}" --bind "enter:become(nvim {+})"'
+alias n.='nvim .'
+alias noise='play -n synth brownnoise brownnoise pinknoise pinknoise whitenoise whitenoise vol 0.3'
+alias nrd='npm run dev'
+alias pbcopy='xclip -sel clip'
+alias pink='play -n synth pinknoise vol 0.3' # requires  `sox` app `sudo apt install sox`
+alias pmi='sudo pacman -Sy '
+alias pm='sudo pacman '
+alias pmu='sudo pacman -Syu'
+alias ra="ranger"
+alias rtw89='yay --noconfirm -S rtw89-dkms-git && sudo dracut -f --regenerate-all'
+alias sb='npx supabase'
 alias shutdown='systemctl poweroff'
+alias sudoedit='sudo -E -s '
+alias tmc='transmission-client'
+alias tmuxa='tmux attach -t '
+alias tmuxs='tmux new-session -s '
+alias ts='~/.config/ml4w/scripts/snapshot.sh'
 alias v='$EDITOR'
 alias vim='$EDITOR'
-alias ts='~/.config/ml4w/scripts/snapshot.sh'
 alias wifi='nmtui'
-alias cleanup='~/.config/ml4w/scripts/cleanup.sh'
 alias yup='rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist && yay'
-alias rtw89='yay --noconfirm -S rtw89-dkms-git && sudo dracut -f --regenerate-all'
-alias ra="ranger"
-alias nf='fzf -m --preview="bat --color=always {}" --bind "enter:become(nvim {+})"'
-alias tmc='transmission-client'
-alias clip='cliphist list | fzf --no-sort | cliphist decode | wl-copy'
+alias zr='source ~/.zshrc'
 
 # -----------------------------------------------------
 # ML4W Apps
@@ -61,26 +82,6 @@ alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 wd() {
     . /usr/share/wd/wd.sh
 }
-
-alias b64='base64 "`ls -tr1 | tail -n1`"'
-alias gg='lazygit'
-alias n.='nvim .'
-alias n=$EDITOR
-alias noise='play -n synth brownnoise brownnoise pinknoise pinknoise whitenoise whitenoise vol 0.3'
-alias nrd='npm run dev'
-alias crd='composer run dev'
-alias pbcopy='xclip -sel clip'
-alias pink='play -n synth pinknoise vol 0.3' # requires  `sox` app `sudo apt install sox`
-alias pm='sudo pacman '
-alias pmi='sudo pacman -Sy '
-alias pmu='sudo pacman -Syu'
-alias sb='npx supabase'
-alias sudoedit='sudo -E -s '
-alias tmuxa='tmux attach -t '
-alias tmuxs='tmux new-session -s '
-alias zr='source ~/.zshrc'
-alias cm='chezmoi'
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 ch() {
   curl cheat.sh/$1
