@@ -17,5 +17,4 @@ SSH_AUTH_SOCK=~/.1password/agent.sock
 EDITOR=nvim
 VISUAL=nvim
 STARSHIP_CONFIG=~/.config/starship/starship.toml
-
 XDG_CONFIG_HOME=~/.config/
