@@ -1,4 +1,4 @@
-local font_config = require 'config/font_config'
+-- local font_config = require 'config/font_config'
 
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
@@ -13,7 +13,86 @@ local config = wezterm.config_builder()
 config.color_scheme = 'tokyonight_night'
 
 config.window_background_opacity = 0.9
+-- local font_family = 'SauceCodePro Nerd Font Mono'
+-- local font_family = 'AnonymicePro Nerd Font Mono'
+-- local font_family = 'CaskaydiaMono Nerd Font Mono'
+-- local font_family = 'FiraCode Nerd Font Mono'
+-- local font_family = 'FreeMono'
+-- local font_family = 'Hack Nerd Font Mono'
+-- local font_family = 'Iosevka Nerd Font Mono'
+-- local font_family = 'Liberation Mono'
+-- local font_family = 'Monofur Nerd Font Mono'
+-- local font_family = 'Monoid'
+-- local font_family = 'Nimbus Mono PS'
+-- local font_family = 'SauceCodePro Nerd Font Mono'
+-- local font_family = 'SpaceMono Nerd Font'
+-- local font_family = 'SpaceMono Nerd Font Mono'
+-- local font_family = 'Terminus'
+local font_family = 'VictorMono Nerd Font Mono' -- Funky Italics
+-- local font_family = 'ZedMono Nerd Font Mono' -- Fuzzy?
 
-font_config.apply_to_config(config)
+local font_weight_for_bold = 'Regular'
+local font_style_for_bold_italic = 'Italic'
+
+if font_family == 'VictorMono Nerd Font Mono' then
+  font_weight_for_bold = 'Medium'
+  font_style_for_bold_italic = 'Normal'
+end
+
+config.font = wezterm.font { family = font_family }
+
+config.font_rules = {
+  {
+    intensity = 'Bold',
+    italic = false,
+    font = wezterm.font {
+      family = font_family,
+      weight = font_weight_for_bold,
+      style = font_style_for_bold_italic,
+    },
+  },
+  {
+    intensity = 'Bold',
+    italic = true,
+    font = wezterm.font {
+      family = font_family,
+      weight = font_weight_for_bold,
+      style = font_style_for_bold_italic,
+    },
+  },
+  {
+    italic = true,
+    intensity = 'Half',
+    font = wezterm.font {
+      family = font_family,
+      weight = 'DemiBold',
+      style = font_style_for_italic,
+    },
+  },
+  {
+    italic = true,
+    intensity = 'Normal',
+    font = wezterm.font {
+      family = font_family,
+      style = 'Italic',
+    },
+  },
+}
+if
+    font_family == 'Monofur Nerd Font Mono'
+then
+  config.font_size = 15.0
+elseif
+    font_family == 'Monoid'
+then
+  config.font_size = 11.5
+else
+  config.font_size = 14.0
+end
+config.bold_brightens_ansi_colors = false
+
+
+-- font_config.apply_to_config(config)
+
 -- and finally, return the configuration to wezterm
 return config
