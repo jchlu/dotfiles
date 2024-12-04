@@ -13,7 +13,6 @@ local config = wezterm.config_builder()
 config.color_scheme = 'tokyonight_night'
 
 config.window_background_opacity = 0.9
--- local font_family = 'SauceCodePro Nerd Font Mono'
 -- local font_family = 'AnonymicePro Nerd Font Mono'
 -- local font_family = 'CaskaydiaMono Nerd Font Mono'
 -- local font_family = 'FiraCode Nerd Font Mono'
@@ -25,12 +24,14 @@ config.window_background_opacity = 0.9
 -- local font_family = 'Monoid'
 -- local font_family = 'Nimbus Mono PS'
 -- local font_family = 'SauceCodePro Nerd Font Mono'
+-- local font_family = 'SauceCodePro Nerd Font Mono'
 -- local font_family = 'SpaceMono Nerd Font'
--- local font_family = 'SpaceMono Nerd Font Mono'
+local font_family = 'SpaceMono Nerd Font Mono'
 -- local font_family = 'Terminus'
-local font_family = 'VictorMono Nerd Font Mono' -- Funky Italics
+-- local font_family = 'VictorMono Nerd Font Mono' -- Funky Italics
 -- local font_family = 'ZedMono Nerd Font Mono' -- Fuzzy?
 
+local font_family_for_italic = 'VictorMono Nerd Font Mono' -- Funky Italics
 local font_weight_for_bold = 'Regular'
 local font_style_for_bold_italic = 'Italic'
 
@@ -55,7 +56,7 @@ config.font_rules = {
     intensity = 'Bold',
     italic = true,
     font = wezterm.font {
-      family = font_family,
+      family = font_family_for_italic,
       weight = font_weight_for_bold,
       style = font_style_for_bold_italic,
     },
@@ -66,14 +67,14 @@ config.font_rules = {
     font = wezterm.font {
       family = font_family,
       weight = 'DemiBold',
-      style = font_style_for_italic,
+      style = font_style_for_bold_italic,
     },
   },
   {
     italic = true,
     intensity = 'Normal',
     font = wezterm.font {
-      family = font_family,
+      family = font_family_for_italic,
       style = 'Italic',
     },
   },
@@ -85,14 +86,11 @@ then
 elseif
     font_family == 'Monoid'
 then
-  config.font_size = 11.5
+  config.font_size = 13.0
 else
   config.font_size = 14.0
 end
+
 config.bold_brightens_ansi_colors = false
 
-
--- font_config.apply_to_config(config)
-
--- and finally, return the configuration to wezterm
 return config
