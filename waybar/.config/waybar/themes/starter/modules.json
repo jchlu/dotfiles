@@ -93,7 +93,7 @@
         "return-type": "json",       
         "exec": "~/.config/ml4w/scripts/updates.sh",
         "restart-interval": 60,
-        "on-click": "kitty -e ~/.config/ml4w/scripts/installupdates.sh",
+        "on-click": "kitty ~/.config/ml4w/scripts/installupdates.sh",
         "tooltip": false
     },
 
@@ -209,13 +209,13 @@
     // CPU
     "cpu": {
         "format": "/ C {usage}% ",
-        "on-click": "kitty -e btop --preset 1"
+        "on-click": "kitty btop --preset 1"
     },
 
     // Memory
     "memory": {
         "format": "/ M {}% ",
-        "on-click": "kitty -e btop --preset 1"
+        "on-click": "kitty btop --preset 1"
     },
 
     // Harddisc space used
@@ -223,7 +223,7 @@
         "interval": 30,
         "format": "D {percentage_used}% ",
         "path": "/",
-        "on-click": "kitty -e btop --preset 1"
+        "on-click": "kitty btop --preset 1"
     }, 
 
     "hyprland/language": {
@@ -282,7 +282,7 @@
         "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
         "tooltip-format-disconnected": "Disconnected",
         "max-length": 50,
-        "on-click": "kitty -e nmtui"
+        "on-click": "kitty nmtui"
     },
 
     // Battery
