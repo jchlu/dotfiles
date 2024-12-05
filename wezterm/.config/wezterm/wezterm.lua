@@ -5,7 +5,6 @@ local wezterm = require 'wezterm'
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
-
 config.set_environment_variables = { NEWT_COLORS_FILE = '/home/jchlu/.config/newt-colors.conf' }
 -- This is where you actually apply your config choices
 
@@ -25,14 +24,15 @@ config.window_background_opacity = 0.9
 -- local font_family = 'Monoid'
 -- local font_family = 'Nimbus Mono PS'
 -- local font_family = 'SauceCodePro Nerd Font Mono'
--- local font_family = 'SauceCodePro Nerd Font Mono'
+local font_family = 'SauceCodePro Nerd Font Mono'
 -- local font_family = 'SpaceMono Nerd Font'
-local font_family = 'SpaceMono Nerd Font Mono'
+-- local font_family = 'SpaceMono Nerd Font Mono'
 -- local font_family = 'Terminus'
 -- local font_family = 'VictorMono Nerd Font Mono' -- Funky Italics
 -- local font_family = 'ZedMono Nerd Font Mono' -- Fuzzy?
 
-local font_family_for_italic = 'VictorMono Nerd Font Mono' -- Funky Italics
+local font_family_for_italic = 'SauceCodePro Nerd Font Mono' -- Funky Italics
+-- local font_family_for_italic = 'VictorMono Nerd Font Mono' -- Funky Italics
 local font_weight_for_bold = 'Regular'
 local font_style_for_bold_italic = 'Italic'
 
@@ -82,6 +82,8 @@ config.font_rules = {
 }
 if
     font_family == 'Monofur Nerd Font Mono'
+    or
+    font_family == 'SauceCodePro Nerd Font Mono'
 then
   config.font_size = 15.0
 elseif
