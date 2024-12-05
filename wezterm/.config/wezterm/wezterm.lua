@@ -6,6 +6,7 @@ local wezterm = require 'wezterm'
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
+config.set_environment_variables = { NEWT_COLORS_FILE = '/home/jchlu/.config/newt-colors.conf' }
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:

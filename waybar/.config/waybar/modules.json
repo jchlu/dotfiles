@@ -139,7 +139,7 @@
     "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
-    "on-click": "kitty nmtui"
+    "on-click": "wezterm -e nmtui"
   },
 
   // Battery
