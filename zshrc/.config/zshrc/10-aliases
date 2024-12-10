@@ -7,8 +7,7 @@
 # -----------------------------------------------------
 
 # Special Advent of NeoVim nonsense
-alias nva='cd ~/.config/nvimadvent/ && NVIM_APPNAME=nvimadvent nvim'
-alias nvam='NVIM_APPNAME=nvimadvent nvim'
+alias nvold='NVIM_APPNAME=nvim nvim'
 
 alias b64='base64 "`ls -tr1 | tail -n1`"'
 alias cleanup='~/.config/ml4w/scripts/cleanup.sh'

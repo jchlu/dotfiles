@@ -19,3 +19,4 @@ VISUAL=nvim
 STARSHIP_CONFIG=~/.config/starship/starship.toml
 XDG_CONFIG_HOME=~/.config/
 NEWT_COLORS_FILE=~/.config/newt-colors.conf
+NVIM_APPNAME=nvimadvent
