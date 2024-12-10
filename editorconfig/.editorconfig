@@ -1,0 +1,10 @@
+root = true
+
+[*]
+indent_style = space
+
+[*.lua]
+indent_size = 2
+
+[*.{html,php,astro}]
+indent_size = 4
