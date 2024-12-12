@@ -1,0 +1,8 @@
+@ Software Updates < reload-period 15;
+https://codeberg.org/newsraft/newsraft/releases.rss "Newsraft Releases"
+https://archlinux.org/feeds/packages/ "Arch Recent Updates"
+https://neovim.io/news.xml "Neovim News"
+
+@ Youtube Updates < reload-period 15;
+https://www.youtube.com/feeds/videos.xml?channel_id=UCd3dNckv1Za2coSaHGHl5aA "Teej Youtube"
+https://youtube.com/feeds/videos.xml?playlist_id=PLep05UYkc6wTyBe7kPjQFWVXTlhKeQejM "Neovim conf 2024"
