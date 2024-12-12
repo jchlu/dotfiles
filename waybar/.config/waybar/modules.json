@@ -57,7 +57,7 @@
   // Keyboard State
   "keyboard-state": {
     "numlock": true,
-    "capslock": true,
+    "capslock": false,
     "format": {
     "numlock": "➆ {icon}",
     "capslock": "⇪ {icon}",
