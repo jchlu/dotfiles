@@ -17,6 +17,7 @@ return {
     require 'lspconfig'.lua_ls.setup {}
     require 'lspconfig'.tailwindcss.setup {}
     require 'lspconfig'.intelephense.setup {}
+    require 'lspconfig'.astro.setup {}
     -- require 'lspconfig'.phpactor.setup {}
     vim.api.nvim_create_autocmd('LspAttach', {
       callback = function(args)
