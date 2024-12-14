@@ -16,7 +16,18 @@ return {
   config = function()
     require 'lspconfig'.lua_ls.setup {}
     require 'lspconfig'.tailwindcss.setup {}
-    require 'lspconfig'.intelephense.setup {}
+    require 'lspconfig'.intelephense.setup({
+      filetypes = { "php", "blade", "php_only" },
+      settings = {
+        intelephense = {
+          filetypes = { "php", "blade", "php_only" },
+          files = {
+            associations = { "*.php", "*.blade.php" },     -- Associating .blade.php files as well
+            maxSize = 5000000,
+          },
+        },
+      },
+    })
     require 'lspconfig'.astro.setup {}
     -- require 'lspconfig'.phpactor.setup {}
     vim.api.nvim_create_autocmd('LspAttach', {
