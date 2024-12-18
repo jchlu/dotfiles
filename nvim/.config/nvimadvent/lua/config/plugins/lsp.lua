@@ -1,6 +1,7 @@
 return {
   'neovim/nvim-lspconfig',
   dependencies = {
+    { 'saghen/blink.cmp' },
     {
       "folke/lazydev.nvim",
       -- ft = "lua", -- only load on lua files
@@ -14,7 +15,8 @@ return {
     },
   },
   config = function()
-    require 'lspconfig'.lua_ls.setup {}
+    local capabilitites = require('blink.cmp').get_lsp_capabilities()
+    require 'lspconfig'.lua_ls.setup { capabilitites = capabilitites }
     require 'lspconfig'.tailwindcss.setup {}
     require 'lspconfig'.intelephense.setup({
       filetypes = { "php", "blade", "php_only" },
@@ -22,7 +24,7 @@ return {
         intelephense = {
           filetypes = { "php", "blade", "php_only" },
           files = {
-            associations = { "*.php", "*.blade.php" },     -- Associating .blade.php files as well
+            associations = { "*.php", "*.blade.php" }, -- Associating .blade.php files as well
             maxSize = 5000000,
           },
         },
@@ -43,6 +45,19 @@ return {
           })
         end
       end,
+    })
+    require 'lspconfig'.emmet_ls.setup({
+      -- on_attach = on_attach,
+      capabilities = capabilities,
+      filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue" },
+      init_options = {
+        html = {
+          options = {
+            -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+            ["bem.enabled"] = true,
+          },
+        },
+      }
     })
   end,
 }
