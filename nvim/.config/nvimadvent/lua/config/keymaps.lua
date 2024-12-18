@@ -1,9 +1,10 @@
 vim.keymap.set("n", "<space><space>x", ":source %<CR>")
 vim.keymap.set("n", "<space>x", ":.lua<CR>")
 vim.keymap.set("v", "<space>x", ":lua<CR>")
-vim.keymap.set("n", "<space>ee", ":lua MiniFiles.open()<CR>")
+-- vim.keymap.set("n", "<space>ee", ":lua MiniFiles.open()<CR>")
+vim.keymap.set("n", "<space>ee", ":Oil<CR>")
 vim.keymap.set("n", "<C-s>", "<cmd>write<cr>")
-vim.keymap.set("i", "<C-s>", "<cmd>write<cr>") -- write file in insert mode
+vim.keymap.set("i", "<C-s>", "<esc><cmd>write<cr>") -- write file in insert mode
 
 -- Telescope specific mappings
 local telescope_mappings = function()
