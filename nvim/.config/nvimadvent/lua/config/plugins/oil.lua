@@ -8,6 +8,10 @@ return {
       ["l"] = "actions.select",
       ["h"] = { "actions.parent", mode = "n" },
     },
+    view_options = {
+      -- Show files and directories that start with "."
+      show_hidden = true,
+    },
   },
   -- Optional dependencies
   dependencies = { { "echasnovski/mini.icons", opts = {} } },
