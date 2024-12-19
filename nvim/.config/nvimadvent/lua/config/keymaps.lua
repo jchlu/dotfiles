@@ -6,6 +6,7 @@ vim.keymap.set("n", "<space>ee", ":Oil<CR>", { desc = 'Opem the Oil file manager
 vim.keymap.set("n", "<C-s>", "<cmd>write<cr>")
 vim.keymap.set("i", "<C-s>", "<esc><cmd>write<cr>") -- write file in insert mode
 vim.keymap.set("n", "<C-t>", "<cmd>$tabnew<cr>", { desc = 'Open a new tab after the final one' })
+vim.keymap.set({ "n", "t" }, "<C-\\>", "<cmd>Floaterminal<CR>", { desc = 'Toggle a floating terminal window' })
 
 -- Telescope specific mappings
 local telescope_mappings = function()
