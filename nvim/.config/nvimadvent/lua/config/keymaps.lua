@@ -9,6 +9,12 @@ keymap.set("i", "<C-s>", "<esc><cmd>write<cr>", { desc = 'write file in insert m
 keymap.set("n", "<C-t>", "<cmd>$tabnew<cr>", { desc = 'Open a new tab after the final one' })
 keymap.set({ "n", "t" }, "<C-\\>", "<cmd>Floaterminal<CR>", { desc = 'Toggle a floating terminal window' })
 
+-- Selection
+keymap.set("n", "<C-a>", "ggVG", { desc = "select all" })
+
+-- Buffer Management
+keymap.set("n", "<leader>bb", ":b#<CR>", { desc = 'toggle last two buffers' })
+
 -- Tab management
 keymap.set("n", "<leader>to", ":tabnew<CR>", { desc = 'open a new tab' })
 keymap.set("n", "<leader>tx", ":tabclose<CR>", { desc = 'close a tab' })
