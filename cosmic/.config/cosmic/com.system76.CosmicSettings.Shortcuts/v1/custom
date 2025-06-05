@@ -1,0 +1,30 @@
+{
+    (
+        modifiers: [
+            Super,
+            Alt,
+        ],
+        key: "k",
+    ): Workspace(4),
+    (
+        modifiers: [
+            Super,
+            Alt,
+        ],
+        key: "l",
+    ): NextWorkspace,
+    (
+        modifiers: [
+            Super,
+            Alt,
+        ],
+        key: "j",
+    ): Workspace(1),
+    (
+        modifiers: [
+            Super,
+            Alt,
+        ],
+        key: "h",
+    ): PreviousWorkspace,
+}
