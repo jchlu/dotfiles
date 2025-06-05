@@ -3,6 +3,9 @@
 # -----------------------------------------------------
 setopt INTERACTIVE_COMMENTS
 
+autoload -Uz compinit
+compinit
+
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 eval "$(op completion zsh)"

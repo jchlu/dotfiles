@@ -19,13 +19,13 @@ alias fc-list-mono="fc-list :mono | cut -d ':' -f2 | cut -d ',' -f1 | sort | uni
 alias ff='fastfetch'
 alias gg='lazygit'
 alias ll='eza -al --icons --git'
-alias ls='eza -al --icons'
 alias lt='eza -a --tree --level=1 --icons'
 alias n=$EDITOR
 alias nf='fzf -m --preview="bat --color=always {}" --bind "enter:become(nvim {+})"'
 alias n.='nvim .'
 alias noise='play -n synth brownnoise brownnoise pinknoise pinknoise whitenoise whitenoise vol 0.3'
 alias nrd='npm run dev'
+alias open='xdg-open'
 alias pbcopy='xclip -sel clip'
 alias pink='play -n synth pinknoise vol 0.3' # requires  `sox` app `sudo apt install sox`
 alias pmi='sudo pacman -Sy '
@@ -40,11 +40,14 @@ alias tmc='transmission-client'
 alias tmuxa='tmux attach -t '
 alias tmuxs='tmux new-session -s '
 alias ts='~/.config/ml4w/scripts/snapshot.sh'
+alias top5="sudo reflector --connection-timeout 1 --verbose --latest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
 alias v='$EDITOR'
 alias vim='$EDITOR'
 alias wifi='nmtui'
+alias wip='rsync -r ~/Projects/Python/FCPA ~/MEGA/Florida\ Chiropractic/WIP/'
 alias yup='rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist && yay'
 alias zr='source ~/.zshrc'
+alias zed='zeditor'
 
 # -----------------------------------------------------
 # ML4W Apps

@@ -7,12 +7,10 @@ source <(fzf --zsh)
 HISTFILE=~/.zsh_history
 HISTSIZE=20000
 SAVEHIST=10000
-setopt appendhistory autocd extendedglob nomatch histignorealldups histignorespace
+setopt appendhistory autocd extendedglob nomatch histignorespace
 unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/jchlu/.zshrc'
 
-autoload -Uz compinit
-compinit
