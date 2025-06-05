@@ -6,7 +6,7 @@ return {
     require('mini.icons').setup()
     require('mini.pairs').setup()
     require('mini.statusline').setup { use_icons = true }
-    require('mini.surround').setup()
+    -- require('mini.surround').setup()
     --    require('mini.files').setup({  -- Customization of explorer windows
     --      windows = {
     -- -- Maximum number of windows to show side by side

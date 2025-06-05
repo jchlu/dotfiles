@@ -16,9 +16,13 @@ return {
   },
   config = function()
     local capabilitites = require('blink.cmp').get_lsp_capabilities()
+    require 'lspconfig'.pyright.setup {}
     require 'lspconfig'.lua_ls.setup { capabilitites = capabilitites }
     require 'lspconfig'.tailwindcss.setup {}
     require 'lspconfig'.intelephense.setup({
+      root_dir = function()
+        return vim.loop.cwd()
+      end,
       filetypes = { "php", "blade", "php_only" },
       settings = {
         intelephense = {
