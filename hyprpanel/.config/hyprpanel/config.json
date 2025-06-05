@@ -3,7 +3,7 @@
   "theme.font.name": "Source Code Pro",
   "theme.font.label": "Source Code Pro",
   "theme.font.size": "0.9rem",
-  "bar.network.showWifiInfo": false,
+  "bar.network.showWifiInfo": true,
   "bar.layouts": {
     "0": {
       "left": [
