@@ -57,7 +57,7 @@
   },
   "menus.clock.time.military": false,
   "menus.clock.time.hideSeconds": false,
-  "menus.clock.weather.enabled": true,
+  "menus.clock.weather.enabled": false,
   "menus.dashboard.shortcuts.left.shortcut2.command": "spotify-launcher",
   "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Zen Browser",
   "menus.dashboard.shortcuts.left.shortcut1.command": "zen-browser",
@@ -429,5 +429,6 @@
   "theme.bar.menus.opacity": 100,
   "theme.bar.opacity": 60,
   "theme.font.weight": 400,
-  "menus.dashboard.shortcuts.left.shortcut4.command": "wofi --show drun"
+  "menus.dashboard.shortcuts.left.shortcut4.command": "wofi --show drun",
+  "menus.dashboard.directories.enabled": true
 }
