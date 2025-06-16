@@ -9,6 +9,23 @@ keymap.set("i", "<C-s>", "<esc><cmd>write<cr>", { desc = 'write file in insert m
 keymap.set("n", "<C-t>", "<cmd>$tabnew<cr>", { desc = 'Open a new tab after the final one' })
 keymap.set({ "n", "t" }, "<C-\\>", "<cmd>Floaterminal<CR>", { desc = 'Toggle a floating terminal window' })
 
+keymap.set('n', '<C-d>', '<C-d>zz', { silent = true })
+keymap.set('n', '<C-u>', '<C-u>zz', { silent = true })
+keymap.set("i", "<C-;>", function()
+  vim.cmd "stopinsert"
+  vim.api.nvim_input("A;<ESC>")
+end, { desc = "Append a semi-colon to the end of the line, for PHP mostly" })
+keymap.set("n", "<C-;>", function()
+  vim.api.nvim_input("A;<ESC>")
+end, { desc = "Append a semi-colon to the end of the line, for PHP mostly" })
+keymap.set("i", "<C-.>", function()
+  vim.cmd "stopinsert"
+  vim.api.nvim_input("A,<ESC>")
+end, { desc = "Append a semi-colon to the end of the line, for JSON mostly" })
+keymap.set("n", "<C-.>", function()
+  vim.api.nvim_input("A,<ESC>")
+end, { desc = "Append a semi-colon to the end of the line, for JSON mostly" })
+
 -- Selection
 keymap.set("n", "<C-a>", "ggVG", { desc = "select all" })
 
@@ -38,5 +55,26 @@ local telescope_mappings = function()
       cwd = vim.fn.stdpath('config')
     }
   end, { desc = 'Telescope edit NeoVim Config' })
+  keymap.set('n', '<leader>ed', function()
+    builtin.find_files {
+      hidden = true,
+      cwd = "~/dotfiles/"
+    }
+  end, { desc = 'Telescope edit dotfiles' })
+  keymap.set('n', '<leader>eh', function()
+    builtin.find_files {
+      cwd = "~/dotfiles/hypr/.config/hypr/"
+    }
+  end, { desc = 'Telescope edit Hyprland Config' })
+  keymap.set('n', '<leader>eg', function()
+    builtin.find_files {
+      cwd = "~/dotfiles/ghostty/.config/ghostty/"
+    }
+  end, { desc = 'Telescope edit Ghostty Config' })
+  keymap.set('n', '<leader>ez', function()
+    builtin.find_files {
+      cwd = "~/dotfiles/zshrc/.config/zshrc"
+    }
+  end, { desc = 'Telescope edit zsh Config' })
 end
 telescope_mappings()
