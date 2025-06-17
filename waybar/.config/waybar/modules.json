@@ -91,20 +91,21 @@
   // CPU
   "cpu": {
     "format": "[ C {usage}% ",
-    "on-click": "kitty btop --preset 1"
+    "on-click": "ghostty -e btop --preset 1"
   },
 
   // Memory
   "memory": {
     "format": "| M {}% ",
-    "on-click": "kitty btop --preset 1"
+    "on-click": "ghostty -e btop --preset 1"
   },
 
   // Harddisc space used
   "disk": {
     "interval": 30,
     "format": "| 🖸 {percentage_free}% ]",
-    "path": "/"
+    "path": "/",
+    "on-click": "ghostty -e --wait-after-command duf"
   },
 
   "hyprland/language": {
@@ -139,7 +140,7 @@
     "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
-    "on-click": "wezterm -e nmtui"
+    "on-click": "ghostty -e nmtui --wait-after-command"
   },
 
   // Battery
