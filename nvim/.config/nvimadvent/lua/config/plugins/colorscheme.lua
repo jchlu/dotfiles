@@ -1,1 +1,9 @@
-return { "folke/tokyonight.nvim", config = function(opts) vim.cmd.colorscheme "tokyonight" end }
+return {
+  "folke/tokyonight.nvim",
+  -- dependencies = 'xiyaowong/transparent.nvim',
+  -- opts = { transparent = vim.g.transparent_enabled },
+  config = function(_, opts)
+    require('tokyonight').setup(opts)
+    vim.cmd.colorscheme "tokyonight-storm"
+  end
+}
