@@ -1,0 +1,10 @@
+[Unit]
+Description=Clipboard manager for Wayland
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/wl-paste --watch cliphist store
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

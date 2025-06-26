@@ -1,0 +1,10 @@
+[Unit]
+Description=MEGAsync
+
+[Service]
+Type=simple
+ExecStart= /usr/bin/megasync
+Restart=always
+
+[Install]
+WantedBy=graphical.target
