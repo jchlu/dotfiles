@@ -15,6 +15,7 @@
         "~/.config/waybar/modules.json"
     ],    
     "modules-left": [
+        "idle_inhibitor",
         "custom/appmenu",
         // "group/quicklinks",
         "hyprland/window"

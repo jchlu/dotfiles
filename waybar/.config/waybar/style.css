@@ -149,13 +149,14 @@ window#waybar.empty #window {
  * Custom Quicklinks
  * ----------------------------------------------------- */
 
+#battery,
+#clock ,
+#custom-appmenu,
 #custom-browser, 
 #custom-filemanager,
+#idle_inhibitor,
 #network,
-#pulseaudio,
-#battery,
-#custom-appmenu,
-#clock {
+#pulseaudio {
     margin-right: 20px;
     font-size: 16px;
     font-weight: bold;
