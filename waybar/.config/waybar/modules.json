@@ -140,7 +140,7 @@
     "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
-    "on-click": "hyprctl dispatch exec \"[float;size 800 600] ghostty -e nmtui\""
+    "on-click": "ghostty -e nmtui"
   },
 
   // Battery
