@@ -1,12 +1,14 @@
 [Unit]
-Description=Clipboard manager for Wayland
+Description=Autostart service for Dropbox
 Requires=niri.service
 After=niri.service
 
 
 [Service]
-Type=simple
-ExecStart=/usr/bin/wl-paste --watch cliphist store
+Type=forking
+ExecStart=/usr/bin/dropbox-cli start
+ExecStop=/usr/bin/dropbox-cli stop
+Restart=on-failure
 
 [Install]
 WantedBy=xdg-desktop-autostart.target

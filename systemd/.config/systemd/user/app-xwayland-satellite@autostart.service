@@ -1,12 +1,12 @@
 [Unit]
-Description=Clipboard manager for Wayland
+Description=Autostart service for xwayland-satellite
 Requires=niri.service
 After=niri.service
 
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/wl-paste --watch cliphist store
+ExecStart=env DISPLAY=:0 xwayland-satellite
 
 [Install]
 WantedBy=xdg-desktop-autostart.target

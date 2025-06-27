@@ -11,4 +11,4 @@ ExecStart=/usr/bin/swayidle -w \
 Restart=always
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=graphical-session.target

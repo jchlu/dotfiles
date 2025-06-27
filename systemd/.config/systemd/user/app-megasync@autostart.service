@@ -1,12 +1,14 @@
 [Unit]
-Description=Clipboard manager for Wayland
-Requires=niri.service
-After=niri.service
+Description=Autostart service for MEGASync
+Requires=xwayland-satellite.service
+After=xwayland-satellite.service
 
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/wl-paste --watch cliphist store
+ExecStartPre=/usr/bin/sleep 10
+ExecStart=env DISPLAY=:0 megasync --ozone-platform=x11
+Restart=always
 
 [Install]
 WantedBy=xdg-desktop-autostart.target
