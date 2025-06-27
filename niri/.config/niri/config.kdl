@@ -257,19 +257,13 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-spawn-at-startup "xwayland-satellite"
+// spawn-at-startup "xwayland-satellite"
 environment {
     DISPLAY ":0"
 }
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "waybar"
-// spawn-at-startup "1password"
-// spawn-at-startup "dropbox"
-spawn-at-startup "sh" "-c" "megasync";
-
-    // Mod+C hotkey-overlay-title="Show clipboard history" { spawn "sh" "-c" "cliphist list | wofi --dmenu | cliphist decode | wl-copy"; }
-    // Mod+C hotkey-overlay-title="Clipboard history: cliphist" { spawn "cliphist list || wofi -S dmenu || cliphist decode || wl-copy"; }
-// ExecStart=/usr/bin/wl-paste --watch cliphist store
+// spawn-at-startup "waybar"
+spawn-at-startup "ghostty"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -328,9 +322,9 @@ window-rule {
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+window-rule {
+    // match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    // match app-id=r#"^org\.gnome\.World\.Secrets$"#
     match app-id=r#"^1Password$"#
 
     block-out-from "screen-capture"
@@ -347,6 +341,10 @@ window-rule {
     opacity 0.9
 }
 
+window-rule {
+    match app-id=r#"^zen$"#
+    open-maximized true
+}
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program
