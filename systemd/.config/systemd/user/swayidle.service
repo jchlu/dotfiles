@@ -6,7 +6,7 @@ Documentation=man:swayidle(1)
 Type=simple
 ExecStart=/usr/bin/swayidle -w \
     timeout 600  'niri msg action power-off-monitors' \
-    timeout 660 'systemctl suspend' \
+    timeout 660 'systemctl hibernate' \
     before-sleep 'hyprlock'
 Restart=always
 

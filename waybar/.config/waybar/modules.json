@@ -140,7 +140,7 @@
     "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
-    "on-click": "ghostty -e nmtui"
+    "on-click": "ghostty -e env NEWT_COLORS_FILE=$XDG_CONFIG_HOME/newt-colors.conf nmtui"
   },
 
   // Battery

@@ -29,7 +29,7 @@ input {
         dwt
         // dwtp
         drag true
-        // drag-lock
+        drag-lock
         natural-scroll
         // accel-speed 0.2
         // accel-profile "flat"
@@ -259,7 +259,8 @@ layout {
 
 // spawn-at-startup "xwayland-satellite"
 environment {
-    DISPLAY ":0"
+     NEWT_COLORS_FILE "$XDG_CONFIG_HOME/newt-colors.conf"
+     DISPLAY ":0"
 }
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // spawn-at-startup "waybar"
