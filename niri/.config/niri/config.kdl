@@ -370,6 +370,7 @@ binds {
     Mod+E hotkey-overlay-title="Start file manager: nautilus" { spawn "nautilus" ; }
     Mod+Ctrl+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    Mod+G hotkey-overlay-title="Open a Terminal: betterbird" { spawn "betterbird"; }
     Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+Ctrl+W hotkey-overlay-title="Lauch waybar" { spawn "waybar"; }
     Mod+Ctrl+D hotkey-overlay-title="Lauch dropbox" { spawn "dropbox"; }
