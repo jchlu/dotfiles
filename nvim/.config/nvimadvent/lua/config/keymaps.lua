@@ -78,3 +78,16 @@ local telescope_mappings = function()
   end, { desc = 'Telescope edit zsh Config' })
 end
 telescope_mappings()
+local function toggle_theme()
+  if vim.opt.background:get() == "dark" then
+    vim.opt.background = "light"
+    -- In my case it was unnecessary to set theme directly,
+    -- as tokyonight reacted to change of vim.opt.background
+    -- vim.cmd("colorscheme tokyonight-day")
+  else
+    vim.opt.background = "dark"
+    -- vim.cmd("colorscheme tokyonight-moon")
+  end
+end
+
+vim.keymap.set("n", "<leader>tt", toggle_theme, {})
