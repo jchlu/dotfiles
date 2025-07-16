@@ -31,6 +31,7 @@ alias pink='play -n synth pinknoise vol 0.3' # requires  `sox` app `sudo apt ins
 alias pmi='sudo pacman -Sy '
 alias pm='sudo pacman '
 alias pmu='sudo pacman -Syu'
+alias dotbak='rsync --archive --compress --verbose --human-readable --partial --progress --update ~/dotfiles /run/media/jchlu/data'
 alias projbak='rsync --archive --compress --verbose --human-readable --partial --progress --update ~/Projects /run/media/jchlu/data'
 alias ra="ranger"
 alias rtw89='yay --noconfirm -S rtw89-dkms-git && sudo dracut -f --regenerate-all'
@@ -47,6 +48,7 @@ alias vim='$EDITOR'
 alias wifi='nmtui'
 alias wip='rsync -r ~/Projects/Python/FCPA ~/MEGA/Florida\ Chiropractic/WIP/'
 alias yup='rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist && yay'
+alias pup='rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist && sudo pacman -Syu'
 alias zr='source ~/.zshrc'
 alias zed='zeditor'
 
