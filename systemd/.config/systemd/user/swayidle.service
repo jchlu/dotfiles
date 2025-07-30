@@ -6,8 +6,9 @@ Documentation=man:swayidle(1)
 Type=simple
 ExecStart=/usr/bin/swayidle -w \
     timeout 600  'niri msg action power-off-monitors' \
-    timeout 660 'systemctl hibernate' \
-    before-sleep 'hyprlock'
+    timeout 660 'pidof hyprlock || hyprlock' \
+    timeout 1200 'systemctl hibernate' \
+    before-sleep 'pidof hyprlock || hyprlock'
 Restart=always
 
 [Install]
