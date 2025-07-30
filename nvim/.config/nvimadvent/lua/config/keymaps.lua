@@ -1,30 +1,35 @@
+---@diagnostic disable-next-line: undefined-global
+local vim = vim
 local keymap = vim.keymap
--- keymap.set("n", "<space><space>x", ":source %<CR>")
-keymap.set("n", "<space>x", ":.lua<CR>", { desc = 'Execute the current line in Lua' })
-keymap.set("v", "<space>x", ":lua<CR>", { desc = 'Execute the current line in Lua' })
--- keymap.set("n", "<space>ee", ":lua MiniFiles.open()<CR>")
-keymap.set("n", "<space>ee", ":Oil<CR>", { desc = 'Opem the Oil file manager' })
-keymap.set("n", "<C-s>", "<cmd>write<cr>")
-keymap.set("i", "<C-s>", "<esc><cmd>write<cr>", { desc = 'write file in insert mode' })
+keymap.set("n", "<leader><leader>x", ":source %<CR>")
+-- keymap.set("n", "<leader>x", ":.lua<CR>", { desc = 'Execute the current line in Lua' })
+-- keymap.set("v", "<leader>x", ":lua<CR>", { desc = 'Execute the current line in Lua' })
+keymap.set("n", "<leader>ee", ":Oil<CR>", { desc = 'Open the Oil file manager' })
+
+keymap.set({ 'n', 'i' }, "<C-s>", function()
+  vim.cmd "stopinsert"
+  vim.lsp.buf.format()
+  vim.cmd "update"
+end, { desc = 'write and format file' })
+
+keymap.set('n', '<leader>ff', ":Pick files<CR>", { desc = 'Pick files' })
+keymap.set('n', '<leader>fh', ":Pick help<CR>", { desc = 'Pick help' })
+keymap.set('n', '<leader>fg', ":Pick grep_live<CR>", { desc = 'Pick Live Grep' })
+keymap.set('n', '<leader><leader>', ":Pick buffers<CR>", { desc = 'Pick Buffers' })
+
 keymap.set("n", "<C-t>", "<cmd>$tabnew<cr>", { desc = 'Open a new tab after the final one' })
 keymap.set({ "n", "t" }, "<C-\\>", "<cmd>Floaterminal<CR>", { desc = 'Toggle a floating terminal window' })
 
 keymap.set('n', '<C-d>', '<C-d>zz', { silent = true })
 keymap.set('n', '<C-u>', '<C-u>zz', { silent = true })
-keymap.set("i", "<C-;>", function()
+keymap.set({ 'n', 'i' }, "<C-;>", function()
   vim.cmd "stopinsert"
   vim.api.nvim_input("A;<ESC>")
 end, { desc = "Append a semi-colon to the end of the line, for PHP mostly" })
-keymap.set("n", "<C-;>", function()
-  vim.api.nvim_input("A;<ESC>")
-end, { desc = "Append a semi-colon to the end of the line, for PHP mostly" })
-keymap.set("i", "<C-.>", function()
+keymap.set({ 'n', 'i' }, "<C-.>", function()
   vim.cmd "stopinsert"
   vim.api.nvim_input("A,<ESC>")
-end, { desc = "Append a semi-colon to the end of the line, for JSON mostly" })
-keymap.set("n", "<C-.>", function()
-  vim.api.nvim_input("A,<ESC>")
-end, { desc = "Append a semi-colon to the end of the line, for JSON mostly" })
+end, { desc = "Append a full-stop to the end of the line, for JSON mostly" })
 
 -- Selection
 keymap.set("n", "<C-a>", "ggVG", { desc = "select all" })
@@ -63,9 +68,9 @@ local telescope_mappings = function()
   end, { desc = 'Telescope edit dotfiles' })
   keymap.set('n', '<leader>eh', function()
     builtin.find_files {
-      cwd = "~/dotfiles/hypr/.config/hypr/"
+      cwd = "~/dotfiles/niri/.config/niri/"
     }
-  end, { desc = 'Telescope edit Hyprland Config' })
+  end, { desc = 'Telescope edit WindowManager Config' })
   keymap.set('n', '<leader>eg', function()
     builtin.find_files {
       cwd = "~/dotfiles/ghostty/.config/ghostty/"
@@ -91,7 +96,5 @@ local function toggle_theme()
 end
 
 vim.keymap.set("n", "<leader>tt", toggle_theme, {})
-vim.keymap.set("i", "<C-space>", function()
-  vim.lsp.completion.get()
-end
-)
+vim.keymap.set('i', "<C-space>", vim.lsp.completion.get)
+vim.keymap.set({ 'n', 'i' }, "<leader>lf", vim.lsp.buf.format)

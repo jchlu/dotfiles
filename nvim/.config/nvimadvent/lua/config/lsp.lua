@@ -1,9 +1,11 @@
+local vim = vim
 vim.lsp.enable({
   'emmet_ls',
   'lua_ls',
   'tailwindcss',
   'ts_ls',
   'astro',
+  'jsonls'
 })
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(ev)
@@ -20,7 +22,7 @@ vim.diagnostic.config({
 
   -- Alternatively, customize specific options
   virtual_lines = {
-   -- Only show virtual line diagnostics for the current cursor line
-   current_line = true,
+    -- Only show virtual line diagnostics for the current cursor line
+    current_line = true,
   },
 })

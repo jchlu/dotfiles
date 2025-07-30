@@ -1,3 +1,0 @@
- 7. To invert the value of a setting, prepend it with "inv":
-~~~ cmd
-        :set invic
