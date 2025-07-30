@@ -23,12 +23,13 @@ vim.pack.add {
   { src = 'https://github.com/echasnovski/mini.nvim' }
 }
 
+require('config.lsp')
+
 require('mini.pick').setup()
 require('mini.align').setup()
 require('mini.icons').setup()
 require('mini.pairs').setup()
 require('mini.statusline').setup { use_icons = true }
-require('config.lsp')
 require('oil').setup({
   use_default_keymaps = true,
   keymaps = {

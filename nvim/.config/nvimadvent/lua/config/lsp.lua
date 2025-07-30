@@ -1,3 +1,4 @@
+---@diagnostic disable-next-line: undefined-global
 local vim = vim
 vim.lsp.enable({
   'emmet_ls',
@@ -7,6 +8,7 @@ vim.lsp.enable({
   'astro',
   'jsonls'
 })
+
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(ev)
     local client = vim.lsp.get_client_by_id(ev.data.client_id)
@@ -15,12 +17,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
   end,
 })
-vim.cmd("set completeopt+=noselect")
-vim.diagnostic.config({
-  -- Use the default configuration
-  -- virtual_lines = true
 
-  -- Alternatively, customize specific options
+vim.cmd("set completeopt+=noselect")
+
+vim.diagnostic.config({
   virtual_lines = {
     -- Only show virtual line diagnostics for the current cursor line
     current_line = true,
