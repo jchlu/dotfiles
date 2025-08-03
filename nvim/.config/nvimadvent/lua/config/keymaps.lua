@@ -2,8 +2,8 @@
 local vim = vim
 local keymap = vim.keymap
 keymap.set("n", "<leader><leader>x", ":source %<CR>")
--- keymap.set("n", "<leader>x", ":.lua<CR>", { desc = 'Execute the current line in Lua' })
--- keymap.set("v", "<leader>x", ":lua<CR>", { desc = 'Execute the current line in Lua' })
+keymap.set("n", "<leader>x", ":.lua<CR>", { desc = 'Execute the current line in Lua' })
+keymap.set("v", "<leader>x", ":lua<CR>", { desc = 'Execute the current line in Lua' })
 keymap.set("n", "<leader>ee", ":Oil<CR>", { desc = 'Open the Oil file manager' })
 
 keymap.set({ 'n', 'i' }, "<C-s>", function()
@@ -83,6 +83,7 @@ local telescope_mappings = function()
   end, { desc = 'Telescope edit zsh Config' })
 end
 telescope_mappings()
+
 local function toggle_theme()
   if vim.opt.background:get() == "dark" then
     vim.opt.background = "light"
@@ -97,4 +98,4 @@ end
 
 vim.keymap.set("n", "<leader>tt", toggle_theme, {})
 vim.keymap.set('i', "<C-space>", vim.lsp.completion.get)
-vim.keymap.set({ 'n', 'i' }, "<leader>lf", vim.lsp.buf.format)
+-- vim.keymap.set({ 'n', 'i' }, "<leader>lf", vim.lsp.buf.format)

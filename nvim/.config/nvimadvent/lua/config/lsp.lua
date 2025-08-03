@@ -17,9 +17,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
   end,
 })
-
-vim.cmd("set completeopt+=noselect")
-
+vim.cmd("set completeopt+=noinsert,menuone")
 vim.diagnostic.config({
   virtual_lines = {
     -- Only show virtual line diagnostics for the current cursor line
