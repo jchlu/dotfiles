@@ -42,7 +42,19 @@ keymap.set("n", "<leader>to", ":tabnew<CR>", { desc = 'open a new tab' })
 keymap.set("n", "<leader>tx", ":tabclose<CR>", { desc = 'close a tab' })
 keymap.set("n", "<leader>tn", ":tabn<CR>", { desc = 'next tab' })
 keymap.set("n", "<leader>tp", ":tabp<CR>", { desc = 'previous tab' })
-
+local oil_mappings = function()
+  keymap.set('n', '<leader>en', function()
+    local cwd = vim.fn.stdpath('config')
+    require('oil').open(cwd)
+    vim.cmd.cd({ args = { cwd } })
+  end, { desc = 'Edit NeoVim Config' })
+  keymap.set('n', '<leader>ed', function()
+    local cwd = '~/dotfiles/'
+    require('oil').open(cwd)
+    vim.cmd.cd({ args = { cwd } })
+  end, { desc = 'Edit dotfiles' })
+end
+oil_mappings()
 -- Telescope specific mappings
 local telescope_mappings = function()
   local telescope_check = vim.fn.exists('loaded_telescope')
