@@ -17,7 +17,7 @@ vim.pack.add {
   { src = 'https://github.com/neovim/nvim-lspconfig' },
   { src = 'https://github.com/ellisonleao/gruvbox.nvim' },
   { src = 'https://github.com/stevearc/oil.nvim' },
-  { src = 'https://github.com/echasnovski/mini.nvim' },
+  { src = 'https://github.com/nvim-mini/mini.nvim' },
   { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
   { src = "https://github.com/folke/which-key.nvim" }
 }
@@ -42,12 +42,6 @@ require('oil').setup({
   },
 })
 require('gruvbox').setup()
-
-vim.api.nvim_create_autocmd('TextYankPost', {
-  desc     = 'Highlight when yanking text',
-  group    = vim.api.nvim_create_augroup('advent-highlight-yank', { clear = true }),
-  callback = function() vim.highlight.on_yank() end,
-})
 
 require 'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the listed parsers MUST always be installed)
@@ -83,5 +77,4 @@ require 'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = { "php" },
   },
 }
-vim.cmd(':TSUpdate')
-vim.cmd('colorscheme gruvbox')
+require('config.autostart')
