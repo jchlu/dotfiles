@@ -1,0 +1,9 @@
+#custom-wg.active {
+  background-color: #a6e3a1;
+  color: #1e1e2e;
+}
+
+#custom-wg.inactive {
+  background-color: #45475a;
+  color: #cdd6f4;
+}

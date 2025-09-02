@@ -42,7 +42,7 @@
     "format": "Apps",
     "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings",
     "on-click": "wofi --show drun -replace",
-    "on-click-right": "~/.config/ml4w/scripts/keybindings.sh",
+    // "on-click-right": "~/.config/ml4w/scripts/keybindings.sh",
     "tooltip": false
   },
 
@@ -205,5 +205,15 @@
       "deactivated": ""
     },
     "on-click-right": "hyprlock"        
-  }
+  },
+  "custom/wg": {
+  "exec": "~/.local/bin/wg-toggle --status",
+  "return-type": "json",
+  "interval": 10,
+  "on-click": "~/.local/bin/wg-toggle",
+  "on-click-right": "~/.local/bin/wg-toggle next",
+  "on-scroll-up": "~/.local/bin/wg-toggle previous",
+  "on-scroll-down": "~/.local/bin/wg-toggle next",
+  "tooltip": true
+}
 }
