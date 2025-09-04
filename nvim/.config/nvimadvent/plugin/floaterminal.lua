@@ -1,3 +1,5 @@
+---@diagnostic disable-next-line: undefined-global
+local vim = vim
 vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
 
 local state = {
