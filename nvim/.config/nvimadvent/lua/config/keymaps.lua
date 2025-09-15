@@ -15,7 +15,7 @@ end, { desc = 'write and format file' })
 keymap.set('n', '<leader>ff', ":Pick files<CR>", { desc = 'Pick files' })
 keymap.set('n', '<leader>fh', ":Pick help<CR>", { desc = 'Pick help' })
 keymap.set('n', '<leader>fg', ":Pick grep_live<CR>", { desc = 'Pick Live Grep' })
-keymap.set('n', '<leader><leader>', ":Pick buffers<CR>", { desc = 'Pick Buffers' })
+keymap.set('n', '<leader>b', ":Pick buffers<CR>", { desc = 'Pick Buffers' })
 
 keymap.set("n", "<C-t>", "<cmd>$tabnew<cr>", { desc = 'Open a new tab after the final one' })
 keymap.set({ "n", "t" }, "<C-\\>", "<cmd>Floaterminal<CR>", { desc = 'Toggle a floating terminal window' })
@@ -35,7 +35,7 @@ end, { desc = "Append a full-stop to the end of the line, for JSON mostly" })
 keymap.set("n", "<C-a>", "ggVG", { desc = "select all" })
 
 -- Buffer Management
-keymap.set("n", "<leader>bb", ":b#<CR>", { desc = 'toggle last two buffers' })
+keymap.set("n", "<leader>,", ":b#<CR>", { desc = 'toggle last two buffers' })
 
 -- Tab management
 keymap.set("n", "<leader>to", ":tabnew<CR>", { desc = 'open a new tab' })
