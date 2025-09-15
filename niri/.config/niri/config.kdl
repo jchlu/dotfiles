@@ -261,11 +261,11 @@ layout {
 // spawn-at-startup "xwayland-satellite"
 environment {
      NEWT_COLORS_FILE "$XDG_CONFIG_HOME/newt-colors.conf"
-     DISPLAY ":0"
 }
+
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // spawn-at-startup "waybar"
-spawn-at-startup "ghostty"
+spawn-sh-at-startup "ghostty --window-width=1916 --window-height=1031"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -371,12 +371,12 @@ binds {
     Mod+E hotkey-overlay-title="Start file manager: nautilus" { spawn "nautilus" ; }
     Mod+Ctrl+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
-    Mod+G hotkey-overlay-title="Open a Terminal: betterbird" { spawn "betterbird"; }
+    Mod+G hotkey-overlay-title="Run an Application: betterbird" { spawn "betterbird"; }
     Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
-    Mod+Ctrl+W hotkey-overlay-title="Lauch waybar" { spawn "waybar"; }
-    Mod+Ctrl+D hotkey-overlay-title="Lauch dropbox" { spawn "dropbox"; }
-    Mod+Ctrl+P hotkey-overlay-title="Lauch 1Password" { spawn "1password"; }
-    Mod+Ctrl+M hotkey-overlay-title="Lauch megasync" { spawn "sh" "-c" "megasync"; }
+    Mod+Ctrl+W hotkey-overlay-title="Launch waybar" { spawn "waybar"; }
+    Mod+Ctrl+D hotkey-overlay-title="Launch dropbox" { spawn "dropbox"; }
+    Mod+Ctrl+P hotkey-overlay-title="Launch 1Password" { spawn "1password"; }
+    Mod+Ctrl+M hotkey-overlay-title="Launch megasync" { spawn "sh" "-c" "megasync"; }
     // Mod+C hotkey-overlay-title="Clipboard history: cliphist" { spawn "cliphist list || wofi -S dmenu || cliphist decode || wl-copy"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
