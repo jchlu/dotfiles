@@ -19,7 +19,7 @@ vim.pack.add {
   { src = 'https://github.com/ellisonleao/gruvbox.nvim' },
   { src = 'https://github.com/stevearc/oil.nvim' },
   { src = 'https://github.com/nvim-mini/mini.nvim' },
-  { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
+  { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master" },
   { src = "https://github.com/folke/which-key.nvim" }
 }
 
