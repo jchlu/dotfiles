@@ -1,5 +1,3 @@
----@diagnostic disable-next-line: undefined-global
-local vim = vim
 -- vim.cmd(':TSUpdate')
 vim.cmd.colorscheme('gruvbox')
 vim.api.nvim_create_autocmd('TextYankPost', {

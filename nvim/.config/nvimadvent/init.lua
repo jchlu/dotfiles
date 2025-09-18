@@ -1,5 +1,3 @@
----@diagnostic disable-next-line: undefined-global
-local vim = vim
 vim.cmd.set('path+=**')
 vim.g.mapleader      = " "
 vim.g.maplocalleader = "\\"

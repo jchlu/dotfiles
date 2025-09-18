@@ -1,5 +1,3 @@
----@diagnostic disable-next-line: undefined-global
-local vim = vim
 local keymap = vim.keymap
 keymap.set("n", "<leader><leader>x", ":source %<CR>")
 keymap.set("n", "<leader>x", ":.lua<CR>", { desc = 'Execute the current line in Lua' })
@@ -35,7 +33,7 @@ end, { desc = "Append a full-stop to the end of the line, for JSON mostly" })
 keymap.set("n", "<C-a>", "ggVG", { desc = "select all" })
 
 -- Buffer Management
-keymap.set("n", "<leader>,", ":b#<CR>", { desc = 'toggle last two buffers' })
+keymap.set("n", "<leader>.", ":b#<CR>", { desc = 'toggle last two buffers' })
 
 -- Tab management
 keymap.set("n", "<leader>to", ":tabnew<CR>", { desc = 'open a new tab' })

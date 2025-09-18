@@ -1,5 +1,3 @@
----@diagnostic disable-next-line: undefined-global
-local vim = vim
 vim.lsp.enable({
   'astro',
   'emmet_ls',

@@ -1,5 +1,3 @@
----@diagnostic disable-next-line: undefined-global
-local vim = vim
 -- overrde colors after colorscheme has loaded
 vim.cmd [[
 "highlight Normal      guibg   = none
