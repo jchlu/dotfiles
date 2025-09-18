@@ -13,6 +13,7 @@ vim.o.signcolumn     = "yes"
 vim.o.winborder      = "rounded"
 vim.o.wildmenu       = true
 vim.o.autochdir      = false
+
 vim.pack.add {
   { src = 'https://github.com/neovim/nvim-lspconfig' },
   { src = 'https://github.com/ellisonleao/gruvbox.nvim' },
@@ -23,15 +24,42 @@ vim.pack.add {
 }
 
 require('config.lsp')
-
 require('which-key').setup()
 require('mini.pick').setup()
+local pick = require("mini.pick")
+pick.registry.buffers = function(local_opts, opts)
+  local_opts = local_opts or {}
+
+  -- Delete the current buffer
+  local wipeout_cur = function()
+    vim.api.nvim_buf_delete(MiniPick.get_picker_matches().current.bufnr, {})
+    MiniPick.builtin.buffers(local_opts, opts)
+  end
+
+  -- Map <C-d> to delete the buffer
+  local buffer_mappings = { wipeout = { char = "<C-d>", func = wipeout_cur } }
+
+  -- Show buffers with short names
+  local show = function(buf_id, items, query)
+    vim.tbl_map(function(i) i.text = vim.fn.fnamemodify(i.text, ":t") end, items)
+    MiniPick.default_show(buf_id, items, query, { show_icons = true })
+  end
+
+  -- Merge options
+  opts = vim.tbl_deep_extend("force", {
+    source = { show = show },
+    mappings = buffer_mappings,
+  }, opts or {})
+
+  return MiniPick.builtin.buffers(local_opts, opts)
+end
 require('mini.align').setup()
 require('mini.icons').setup()
-require('mini.pairs').setup()
+-- require('mini.pairs').setup()
 require('mini.surround').setup()
 require('mini.statusline').setup { use_icons = true }
 require('oil').setup({
+  skip_confirm_for_simple_edits = true,
   use_default_keymaps = true,
   keymaps = {
     ["l"] = "actions.select",
