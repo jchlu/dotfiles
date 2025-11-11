@@ -10,7 +10,7 @@
 //
 {
   // Workspaces
-  "hyprland/workspaces" : {
+  "hyprland/workspaces": {
     "on-click": "activate",
     "active-only": false,
     "all-outputs": true,
@@ -22,9 +22,8 @@
     },
     "persistent-workspaces": {
       "*": 5
-    }       
+    }
   },
-
   // Hyprland Window
   "hyprland/window": {
     "rewrite": {
@@ -36,7 +35,6 @@
     },
     "separate-outputs": true
   },
-
   // Rofi Application Launcher
   "custom/appmenu": {
     "format": "Apps",
@@ -45,7 +43,6 @@
     // "on-click-right": "~/.config/ml4w/scripts/keybindings.sh",
     "tooltip": false
   },
-
   // Power Menu
   "custom/exit": {
     "format": "⏻",
@@ -53,53 +50,46 @@
     "on-click": "wlogout -b 4",
     "tooltip": false
   },
-
   // Keyboard State
   "keyboard-state": {
     "numlock": true,
     "capslock": false,
     "format": {
-    "numlock": "➆ {icon}",
-    "capslock": "⇪ {icon}",
+      "numlock": "➆ {icon}",
+      "capslock": "⇪ {icon}",
     }, //"{name} {icon}",
     "format-icons": {
       "locked": "◉ ",
       "unlocked": "⭘ "
     }
   },
-
   // System tray
   "tray": {
     // "icon-size": 21,
     "spacing": 10,
     "show-passive-items": true
   },
-
   // Clock
   "clock": {
     // "timezone": "America/New_York",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}"
   },
-
   // System
   "custom/system": {
     "format": "",
     "tooltip": false
   },
-
   // CPU
   "cpu": {
     "format": "[ C {usage}% ",
     "on-click": "hyprctl dispatch exec \"[float;size 90% 90%] ghostty -e btop --preset 1\""
   },
-
   // Memory
   "memory": {
     "format": "| M {}% ",
     "on-click": "hyprctl dispatch exec \"[float;size 90% 90%] ghostty -e btop --preset 2\""
   },
-
   // Harddisc space used
   "disk": {
     "interval": 30,
@@ -107,11 +97,9 @@
     "path": "/",
     "on-click": "hyprctl dispatch exec \"[float;size 50% 90%] ghostty --wait-after-command -e duf\""
   },
-
   "hyprland/language": {
     "format": "| K {short}"
   },
-
   // Group Hardware
   "group/hardware": {
     "orientation": "inherit",
@@ -119,7 +107,7 @@
       "transition-duration": 300,
       "children-class": "not-memory",
       "transition-left-to-right": false
-    },        
+    },
     "modules": [
       "custom/system",
       "disk",
@@ -128,7 +116,6 @@
       "hyprland/language"
     ]
   },
-
   // Network
   "network": {
     "format": "{ifname}",
@@ -140,9 +127,8 @@
     "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
-    "on-click": "ghostty -e env NEWT_COLORS_FILE=$XDG_CONFIG_HOME/newt-colors.conf nmtui"
+    "on-click": "ghostty -e impala"
   },
-
   // Battery
   "battery": {
     "states": {
@@ -156,9 +142,14 @@
     "format-alt": "{icon}  {time}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
-    "format-icons": [" ", " ", " ", " ", " "]
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ]
   },
-
   // Pulseaudio
   "pulseaudio": {
     "scroll-step": 5, // %, can be a float
@@ -175,11 +166,14 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", " ", " "]
+      "default": [
+        "",
+        " ",
+        " "
+      ]
     },
     "on-click": "hyprctl dispatch exec \"[float;size 800 600] pavucontrol\""
   },
-
   // Bluetooth
   "bluetooth": {
     "format-disabled": "",
@@ -188,32 +182,30 @@
     "on-click": "blueman-manager",
     "format-no-controller": ""
   },
-
   // Other
   "user": {
     "format": "{user}",
     "interval": 60,
     "icon": false,
   },
-
   // Idle Inhibator
   "idle_inhibitor": {
     "format": "{icon}",
     "tooltip": true,
-    "format-icons":{
+    "format-icons": {
       "activated": "",
       "deactivated": ""
     },
-    "on-click-right": "hyprlock"        
+    "on-click-right": "swaylock -f"
   },
   "custom/wg": {
-  "exec": "~/.local/bin/wg-toggle --status",
-  "return-type": "json",
-  "interval": 10,
-  "on-click": "~/.local/bin/wg-toggle",
-  "on-click-right": "~/.local/bin/wg-toggle next",
-  "on-scroll-up": "~/.local/bin/wg-toggle previous",
-  "on-scroll-down": "~/.local/bin/wg-toggle next",
-  "tooltip": true
-}
+    "exec": "~/.local/bin/wg-toggle --status",
+    "return-type": "json",
+    "interval": 10,
+    "on-click": "~/.local/bin/wg-toggle",
+    "on-click-right": "~/.local/bin/wg-toggle next",
+    "on-scroll-up": "~/.local/bin/wg-toggle previous",
+    "on-scroll-down": "~/.local/bin/wg-toggle next",
+    "tooltip": true
+  }
 }

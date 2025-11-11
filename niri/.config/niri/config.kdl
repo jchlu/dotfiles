@@ -260,6 +260,7 @@ layout {
 
 // spawn-at-startup "xwayland-satellite"
 environment {
+     ELECTRON_OZONE_PLATFORM_HINT "auto"
      NEWT_COLORS_FILE "$XDG_CONFIG_HOME/newt-colors.conf"
 }
 
@@ -272,7 +273,7 @@ spawn-sh-at-startup "ghostty --window-width=1916 --window-height=1031"
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
 // This option will also fix border/focus ring drawing behind some semitransparent windows.
 // After enabling or disabling this, you need to restart the apps for this to take effect.
-// prefer-no-csd
+prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
@@ -310,7 +311,11 @@ window-rule {
 window-rule {
     match app-id="ghostty"
     draw-border-with-background false 
-    default-column-width {}
+}
+
+window-rule {
+    match app-id=r#"^zen$"#
+    default-column-width { proportion 1.0; }
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
@@ -328,7 +333,6 @@ window-rule {
     // match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     // match app-id=r#"^org\.gnome\.World\.Secrets$"#
     match app-id=r#"^1Password$"#
-
     block-out-from "screen-capture"
 
     // Use this instead if you want them visible on third-party screenshot tools.
@@ -342,11 +346,7 @@ window-rule {
     clip-to-geometry true
     opacity 0.9
 }
-
-window-rule {
-    match app-id=r#"^zen$"#
-    open-maximized true
-}
+//
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program
@@ -369,8 +369,8 @@ binds {
     Mod+Ctrl+B hotkey-overlay-title="Start alternative web browser: Chromium" { spawn "chromium" "--ozone-platform=x11" ; } 
     Mod+C hotkey-overlay-title="Show clipboard history" { spawn "sh" "-c" "cliphist list | wofi --dmenu | cliphist decode | wl-copy"; }
     Mod+E hotkey-overlay-title="Start file manager: nautilus" { spawn "nautilus" ; }
-    Mod+Ctrl+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
-    Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    Mod+Ctrl+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn-sh "swaylock -f"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn-sh "ghostty --window-width=1916 --window-height=1031"; }
     Mod+G hotkey-overlay-title="Run an Application: betterbird" { spawn "betterbird"; }
     Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+Ctrl+W hotkey-overlay-title="Launch waybar" { spawn "waybar"; }

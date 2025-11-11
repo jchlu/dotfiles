@@ -1,0 +1,12 @@
+{
+  "plugins": {
+    "gruvbox.nvim": [],
+    "mini.nvim": [],
+    "nvim-lspconfig": [],
+    "nvim-treesitter": {
+      "version": "'master'"
+    },
+    "oil.nvim": [],
+    "which-key.nvim": []
+  }
+}

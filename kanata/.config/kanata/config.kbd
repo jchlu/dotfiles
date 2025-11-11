@@ -33,5 +33,5 @@ configuration entries.
 )
 
 (defalias
-  cap (tap-hold-press 200 200 esc lctl)
+  cap (tap-hold 200 200 esc lctl)
 )

@@ -7,7 +7,7 @@ source <(fzf --zsh)
 HISTFILE=~/.zsh_history
 HISTSIZE=20000
 SAVEHIST=10000
-setopt appendhistory autocd extendedglob nomatch histignorespace
+setopt autocd extendedglob nomatch histignorespace dot_glob extended_glob share_history
 unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
