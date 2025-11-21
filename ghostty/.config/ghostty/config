@@ -1,9 +1,11 @@
+shell-integration = zsh
 font-feature = -calt
 font-size = 14
 theme = TokyoNight Moon
 background-opacity = 0.9
 window-decoration = false
 gtk-tabs-location = hidden
+env = NEWT_COLORS_FILE=/home/jchlu/.config/newt-colors.conf
 # font-family = AnonymicePro Nerd Font
   #AnonymicePro Nerd Font
   #AnonymicePro Nerd Font Bold

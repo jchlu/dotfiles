@@ -127,7 +127,7 @@
     "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
-    "on-click": "ghostty -e impala"
+    "on-click": "ghostty -e nmtui"
   },
   // Battery
   "battery": {
