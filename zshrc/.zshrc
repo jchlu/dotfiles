@@ -19,9 +19,9 @@ if type sheldon > /dev/null ; then
 fi
 
 # fnm
-export PATH="/home/jchlu/.local/share/fnm:$PATH"
-eval "`fnm env`"
-eval "$(fnm env --use-on-cd)"
+# export PATH="/home/jchlu/.local/share/fnm:$PATH"
+# eval "`fnm env`"
+# eval "$(fnm env --use-on-cd)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

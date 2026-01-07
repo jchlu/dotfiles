@@ -150,10 +150,7 @@ overview {
 // See the binds section below for more spawn examples.
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
-// spawn-at-startup "dms" "run"
-// spawn-sh-at-startup "qs -c noctalia-shell"
-spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
-spawn-sh-at-startup "alacritty --window-width=1916 --window-height=1031"
+spawn-sh-at-startup "kitty"
 environment {
   XDG_CURRENT_DESKTOP "niri"
   QT_QPA_PLATFORM "wayland"
@@ -265,7 +262,7 @@ binds {
     Mod+B hotkey-overlay-title="Start web browser: Zen" { spawn "zen-browser" ; }
     Mod+Ctrl+B hotkey-overlay-title="Start alternative web browser: Chromium" { spawn "chromium" "--ozone-platform=x11" ; } 
     Mod+G hotkey-overlay-title="Run an Application: betterbird" { spawn "betterbird"; }
-    Mod+Return hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
+    Mod+Return hotkey-overlay-title="Open Terminal" { spawn "kitty"; }
     Mod+Space hotkey-overlay-title="Application Launcher" {
         spawn "dms" "ipc" "call" "spotlight" "toggle";
     }

@@ -5,10 +5,10 @@ setopt INTERACTIVE_COMMENTS
 
 autoload -Uz compinit
 compinit
-
+zstyle ':completion:complete:*' gain-privileges 1
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-eval "$(op completion zsh)"
+# eval "$(op completion zsh)"
 # -----------------------------------------------------
 # Exports
 # -----------------------------------------------------
@@ -18,8 +18,8 @@ MAKEFLAGS=-j6
 PAGER='most'
 GROFF_NO_SGR=1
 SSH_AUTH_SOCK=~/.1password/agent.sock
-EDITOR=nvim
-VISUAL=nvim
+EDITOR=vim
+VISUAL=vim
 STARSHIP_CONFIG=~/.config/starship/starship.toml
 XDG_CONFIG_HOME=~/.config/
 NEWT_COLORS_FILE=~/.config/newt-colors.conf

@@ -1,47 +1,6 @@
 "Session Management
 set sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
-
-"Line Numbers
-set relativenumber
-set number
-
-"Tabs & Indentation
-set tabstop=2
-set shiftwidth=2
-set shiftround
-set expandtab
-
-"Line Wrapping
-set nowrap
-        
-"Search Settings
-set hlsearch
-set incsearch
-"set ignorecase = false
-set smartcase
-
-"Cursor Line
-set cursorline
-
-"Appearance
-set bg=dark
-colorscheme gruvbox
-set termguicolors
-set scrolloff=8
-
-"Backspace
-set backspace = "indent,eol,start"
-
-"Clipboard
-set clipboard:append("unnamedplus")
-
-"Consider - as part of keyword
-"set iskeyword:append("-")
-
-"Folding
-set foldlevel=20
-"set foldmethod = "expr"
-set foldexpr = "nvim_treesitter#foldexpr()" ; Utilize Treesitter folds
-
-"Performance
-set updatetime=50
+source ~/.config/vim/options.vim
+source ~/.config/vim/keybinds.vim
+source ~/.config/vim/plugins.vim
+source ~/.config/vim/colors.vim

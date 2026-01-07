@@ -1,5 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
-let g:netrw_dirhist_3='/home/jchlu/dotfiles/niri/.config/niri'
-let g:netrw_dirhist_2='/home/jchlu/dotfiles/niri/.config/niri/dms'
-let g:netrw_dirhist_1='/home/jchlu/dotfiles/niri/.config/niri'
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/jchlu/Projects/astro.samanasmiles.org/src/data'
+let g:netrw_dirhist_0='/home/jchlu/Projects/astro.samanasmiles.org/src'
+let g:netrw_dirhist_9='/home/jchlu/Projects/astro.samanasmiles.org'
+let g:netrw_dirhist_8='/home/jchlu/dotfiles/tmux/.config/tmux'
+let g:netrw_dirhist_7='/home/jchlu/dotfiles/tmux/.config'
+let g:netrw_dirhist_6='/home/jchlu/dotfiles/tmux'
+let g:netrw_dirhist_5='/home/jchlu/dotfiles/tmux/.config/tmux'
+let g:netrw_dirhist_4='/home/jchlu/Projects/astro.samanasmiles.org/src/pages'
+let g:netrw_dirhist_3='/home/jchlu/Projects/astro.samanasmiles.org/src'
+let g:netrw_dirhist_2='/home/jchlu/Projects/astro.samanasmiles.org'
