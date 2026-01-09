@@ -50,6 +50,7 @@ gestures {
 input {
     keyboard {
         xkb {
+          options "compose:ralt"
         }
         numlock
     }
