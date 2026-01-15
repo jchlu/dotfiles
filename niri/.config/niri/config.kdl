@@ -150,17 +150,16 @@ overview {
 // See the binds section below for more spawn examples.
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
-// spawn-at-startup "dms" "run"
-// spawn-sh-at-startup "qs -c noctalia-shell"
+spawn-at-startup "dms" "run"
 spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
-spawn-sh-at-startup "alacritty --window-width=1916 --window-height=1031"
+spawn-sh-at-startup "ghostty --window-width=1916 --window-height=1031"
 environment {
   XDG_CURRENT_DESKTOP "niri"
   QT_QPA_PLATFORM "wayland"
   ELECTRON_OZONE_PLATFORM_HINT "auto"
   QT_QPA_PLATFORMTHEME "gtk3"
   QT_QPA_PLATFORMTHEME_QT6 "gtk3"
-  TERMINAL ""
+  TERMINAL "ghostty"
 }
 hotkey-overlay {
     skip-at-startup
@@ -237,7 +236,7 @@ window-rule {
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
     match app-id="Alacritty"
     match app-id="zen"
-    match app-id="com.mitchellh."
+    match app-id="com.mitchellh.ghostty"
     match app-id="kitty"
     draw-border-with-background false
     opacity 0.9
@@ -265,7 +264,7 @@ binds {
     Mod+B hotkey-overlay-title="Start web browser: Zen" { spawn "zen-browser" ; }
     Mod+Ctrl+B hotkey-overlay-title="Start alternative web browser: Chromium" { spawn "chromium" "--ozone-platform=x11" ; } 
     Mod+G hotkey-overlay-title="Run an Application: betterbird" { spawn "betterbird"; }
-    Mod+Return hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
+    Mod+Return hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
     Mod+Space hotkey-overlay-title="Application Launcher" {
         spawn "dms" "ipc" "call" "spotlight" "toggle";
     }
